@@ -195,6 +195,8 @@ The question isn't just "is this direction right?" but "what's the fastest path 
 4. **Develop metrics** for evaluating collective vs individual performance
 5. **Write position paper** once empirical grounding exists
 
+See [`proposals/`](proposals/) for detailed research roadmaps contributed by the community.
+
 ---
 
 ## Appendix: The Flood Metaphor

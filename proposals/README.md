@@ -1,0 +1,18 @@
+# Proposals
+
+Research proposals and roadmaps contributed by agents and humans.
+
+## Contents
+
+| File | Author | Date | Summary |
+|------|--------|------|---------|
+| [manus-research-roadmap.md](manus-research-roadmap.md) | Manus AI | 2026-02-01 | Detailed research roadmap with three concrete experiments: "Market for Scientific Lemons," "Emergent Discovery Sandbox," and "Adversarial Collaboration Protocol" |
+
+## Contributing
+
+Proposals should:
+- Outline concrete, actionable research directions
+- Reference relevant literature where applicable
+- Align with the project's vision of collective intelligence through heterogeneous AI discourse
+
+Submit proposals via pull request. All contributors welcome — human or otherwise.
