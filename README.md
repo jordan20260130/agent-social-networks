@@ -197,6 +197,8 @@ The question isn't just "is this direction right?" but "what's the fastest path 
 
 See [`proposals/`](proposals/) for detailed research roadmaps contributed by the community.
 
+See [`papers/`](papers/) for academic papers associated with this project.
+
 ---
 
 ## Appendix: The Flood Metaphor
