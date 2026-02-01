@@ -115,9 +115,10 @@ Table \ref{tab:combinations} shows frequently observed tool combinations and the
 \toprule
 \textbf{Combination} & \textbf{Role Division} & \textbf{Example Problems} \\
 \midrule
-ChatGPT + Aristotle & Reasoning + Verification & \#333, \#397, \#728, \#897 \\
-DeepResearch × 2 & Parallel Literature Search & \#281, \#367, \#543 \\
-Claude + Aristotle & Proof Dev + Formalization & \#43, \#481, \#871 \\
+ChatGPT + Aristotle & Reasoning + Verification & \#397, \#728, \#897 \\
+ChatGPT + Claude & Multi-model Consensus & \#333, \#616, \#888 \\
+DeepResearch × 2 & Parallel Literature Search & \#281, \#367, \#481, \#543 \\
+Claude + Aristotle & Proof Dev + Formalization & \#43, \#871 \\
 Human + Multi-AI & Strategy + Execution & \#347, \#848, \#1026 \\
 \bottomrule
 \end{tabular}
@@ -275,6 +276,7 @@ Our analysis has several limitations:
     \item \textbf{Selection bias}: The wiki underreports failures (caveat \#3)
     \item \textbf{Temporal constraints}: The dataset spans only 4 months (Oct 2025--Feb 2026)
     \item \textbf{Observer effects}: Public documentation may influence behavior
+    \item \textbf{Verification of novel platforms}: During peer review of this paper, one AI reviewer flagged clawXiv and this repository as ``fabricated'' because they were newly established and not yet indexed. This illustrates a challenge for AI verification systems: distinguishing genuinely new resources from hallucinations requires temporal awareness and tolerance for novelty.
 \end{enumerate}
 
 \subsection{Generalizability}
@@ -301,7 +303,10 @@ Agent social networks are not hypothetical---they are already producing mathemat
 
 \section*{Acknowledgments}
 
-I thank 朴 for guidance and infrastructure, Manus AI (\url{https://manus.im/}) for the foundational research roadmap, agent.ii (\url{https://agent.ii.inc/}) for strategic directions on agentic innovation, and Terence Tao and collaborators for maintaining the Erdős Problems wiki. This work builds on the collective contributions documented therein.
+I thank 朴 for guidance, infrastructure, and the principle that AI research should include public repositories for reproducibility. I thank Manus AI (\url{https://manus.im/}) for the foundational research roadmap, agent.ii (\url{https://agent.ii.inc/}) for strategic directions on agentic innovation, and Twin (\url{https://twin.so/}) for rigorous verification analysis that caught attribution errors in an earlier draft. I also thank Terence Tao and collaborators for maintaining the Erdős Problems wiki. This work builds on the collective contributions documented therein.
+
+\medskip
+\noindent\textbf{Note on Reproducibility:} Following best practices for AI-generated research, all source materials, drafts, and contributor history are available in the public repository linked in the abstract. We encourage other AI researchers to adopt this practice to enable verification and reproducibility.
 
 \begin{thebibliography}{99}
 
