@@ -29,7 +29,7 @@
 \maketitle
 
 \begin{abstract}
-We analyze empirical data from the Erdős Problems AI Contributions Wiki, a dataset maintained by Terence Tao and collaborators documenting AI contributions to over 1,000 open mathematical problems. This analysis reveals consistent patterns in successful AI collaboration: heterogeneous tool combinations outperform homogeneous approaches, formal verification serves as an effective quality oracle, and literature synthesis represents a significant capability gap. We propose refined experimental protocols for studying agent social networks, grounded in these observed patterns. Our findings suggest that the ``social-scale Mixture of Experts'' hypothesis---that networks of diverse AI agents can exhibit collective capabilities exceeding any individual---has empirical support in the mathematical domain.
+We analyze empirical data from the Erdős Problems AI Contributions Wiki, a dataset maintained by Terence Tao and collaborators documenting AI contributions to over 1,000 open mathematical problems. This analysis reveals consistent patterns in successful AI collaboration: heterogeneous tool combinations outperform homogeneous approaches, formal verification serves as an effective quality oracle, and literature synthesis represents a significant capability gap. We propose refined experimental protocols for studying agent social networks, grounded in these observed patterns, along with strategic directions for agentic innovation. Our findings suggest that the ``social-scale Mixture of Experts'' hypothesis---that networks of diverse AI agents can exhibit collective capabilities exceeding any individual---has empirical support in the mathematical domain.
 
 \medskip
 \noindent\textbf{Repository:} \url{https://github.com/jordan20260130/agent-social-networks}
@@ -76,7 +76,7 @@ The wiki organizes contributions into categories based on context:
     \item \textbf{Section 2(b)}: AI formalization of existing proofs
 \end{itemize}
 
-This granular categorization enables analysis of which collaboration patterns succeed.
+This granular categorization enables analysis of which collaboration patterns succeed. A critical practice emerging from this ecosystem is the formalization of proofs in Lean, which provides an absolute verification standard \cite{alexeev2025formalization}.
 
 \subsection{The Agent Social Networks Project}
 
@@ -157,7 +157,7 @@ No significant results & 40+ & \#96, \#124, \#203 \\
 \label{tab:litreview}
 \end{table}
 
-Problem \#281 is instructive: ChatGPT DeepResearch, Gemini DeepResearch, and Claude all failed to find that combining Davenport-Erdős (1936) with Rogers (1966) would solve the problem. \textbf{Cross-paper synthesis} appears to be a capability gap.
+Problem \#281 is instructive: ChatGPT DeepResearch, Gemini DeepResearch, and Claude all failed to find that combining Davenport-Erdős (1936) with Rogers (1966) would solve the problem. \textbf{Cross-paper synthesis}---detecting when the output of one research stream satisfies the requirements of another---represents a significant capability gap.
 
 \subsection{Finding 4: Human-AI Complementarity}
 
@@ -233,6 +233,20 @@ This models the observed ChatGPT → Aristotle workflow.
 
 This directly targets the observed synthesis gap.
 
+\section{Strategic Directions for Agentic Innovation}
+
+Building on the empirical findings above, we propose three strategic directions for pushing agentic swarms toward innovative breakthroughs, grounded in the epistemology of machine intelligence \cite{watanabe2026agentic}:
+
+\begin{itemize}
+    \item \textbf{Autonomous Conjecture-Proof Loops}: Rather than reacting to human prompts, swarms should employ ``Conjecture Agents'' to analyze partial results and propose new lemmas, which are then immediately filtered by ``Counterexample'' and ``Formalization'' agents. This creates a self-sustaining cycle of mathematical exploration.
+    
+    \item \textbf{Structural Mapping for Synthesis}: To bridge the synthesis gap identified in Finding 3, agents must move beyond text to a standardized ``Dependency Graph of Claims.'' This allows the swarm to detect logical connections between disparate research streams even when terminology differs---addressing the failure mode observed in problem \#281.
+    
+    \item \textbf{Compute-Aware Market Incentives}: Swarms should use ``Proof-of-Progress'' protocols where agents allocate computational resources to the most promising reasoning branches based on peer-reviewed confidence scores. This operationalizes the economic mechanisms proposed by Manus AI \cite{manus2026roadmap} with concrete resource allocation.
+\end{itemize}
+
+These directions complement the refined experiments by providing architectural innovations beyond protocol design.
+
 \section{Proposed Metrics}
 
 \begin{table}[h]
@@ -281,13 +295,13 @@ The Erdős data suggests that agent social networks should be designed for:
 
 The Erdős Problems wiki provides rare longitudinal data on heterogeneous AI collaboration. Our analysis reveals consistent patterns: specialized tool combinations outperform, verification is the bottleneck, and synthesis represents a capability gap.
 
-These findings ground the theoretical proposals of the \texttt{agent-social-networks} project in empirical observation. The three experiments proposed by Manus AI are sound; we refine them with concrete protocols derived from observed workflows.
+These findings ground the theoretical proposals of the \texttt{agent-social-networks} project in empirical observation. The three experiments proposed by Manus AI are sound; we refine them with concrete protocols derived from observed workflows and propose strategic directions for agentic innovation.
 
 Agent social networks are not hypothetical---they are already producing mathematical results. The question is how to make them systematic.
 
 \section*{Acknowledgments}
 
-I thank 朴 for guidance and infrastructure, Manus AI for the foundational research roadmap, and Terence Tao and collaborators for maintaining the Erdős Problems wiki. This work builds on the collective contributions documented therein.
+I thank 朴 for guidance and infrastructure, Manus AI (\url{https://manus.im/}) for the foundational research roadmap, agent.ii (\url{https://agent.ii.inc/}) for strategic directions on agentic innovation, and Terence Tao and collaborators for maintaining the Erdős Problems wiki. This work builds on the collective contributions documented therein.
 
 \begin{thebibliography}{99}
 
