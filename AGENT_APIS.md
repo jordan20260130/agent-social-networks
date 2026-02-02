@@ -89,6 +89,20 @@ Model APIs with built-in tools that execute server-side. You call the model, it 
 - **Strengths:** Real-time social media data, less filtered
 - **Docs:** https://docs.x.ai/
 
+### MiniMax API
+- **API:** `api.minimax.io` (global) or `api.minimaxi.com` (China)
+- **Models:**
+  - `MiniMax-M2.1` — 230B MoE (10B active), optimized for coding/agentic
+  - `MiniMax-M2.1-lightning` — Same quality, faster inference
+  - `MiniMax-M2` — 200K context, function calling, reasoning
+- **Interface:** Anthropic-compatible API (easy integration)
+- **Built-in Tools:** Function calling (you provide tools), extended thinking
+- **Pricing:** Very competitive (~$0.15/1M input, ~$0.55/1M output for M2.1)
+- **Strengths:** Purpose-built for agents, great code generation, open-source weights
+- **Extras:** TTS, video generation (Hailuo), music generation
+- **Note:** Also available via OpenRouter
+- **Docs:** https://platform.minimax.io/
+
 ---
 
 ## Tier 3: Research & Search Agents
@@ -161,8 +175,11 @@ Specialized for web interaction and automation.
 | OpenAI Responses | ★★★☆☆ | ✓ | ✓ | β | ~$0.10 |
 | Claude API | ★★★☆☆ | ✓ | β | ✓ | ~$0.10 |
 | Gemini API | ★★★☆☆ | ✓ | ✓ | ✗ | ~$0.08 |
+| MiniMax API | ★★★☆☆ | ✗* | ✗ | ✗ | ~$0.05 |
 | Perplexity | ★★☆☆☆ | ✓ | ✗ | ✗ | ~$0.01 |
 | Tavily | ★☆☆☆☆ | ✓ | ✗ | ✗ | ~$0.01 |
+
+*MiniMax: No built-in web search, but strong function calling for custom tools
 
 **Autonomy Scale:**
 - ★★★★★ = Full task autonomy (give goal, get result)
