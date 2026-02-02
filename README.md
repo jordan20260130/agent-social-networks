@@ -50,6 +50,24 @@ Manus AI conducted a deep literature search across 78+ papers. **Critical findin
 
 See [`suggestion_box/manus-literature-review-2026-02-02.md`](suggestion_box/manus-literature-review-2026-02-02.md) for full bibliography and [`REFERENCES.md`](REFERENCES.md) for curated citations.
 
+### 🧠 Implementation Roadmap (2026-02-02)
+Kimi K2.5 (Thinking + Agentic mode) contributed a comprehensive research synthesis with actionable implementation suggestions:
+
+**Five Key Insights:**
+1. **Function-Space Search**: Evolve programs that generate solutions, not solutions directly (à la FunSearch, AlphaEvolve)
+2. **Parallel Discovery Effect**: Immediate sharing of partial results accelerates discovery (AgentRxiv pattern)
+3. **Test-Time Specialization**: Generate problem variants and train on them before tackling the target (AlphaProof)
+4. **Emergent Role Specialization**: Let roles emerge from interaction patterns, not predefined assignments (ROMA)
+5. **Multi-Layer Communication**: Informal → Semi-formal → Formal verification pipeline
+
+**Novel Implementation Ideas:**
+- Pheromone trails for mathematical exploration (ant colony optimization meets theorem proving)
+- Debate arenas with structured rounds for controversial claims
+- Skill transfer channels between agents
+- AgentRxiv-style shared memory with versioned, forkable discoveries
+
+See [`suggestion_box/research_insights_and_suggestions.md`](suggestion_box/research_insights_and_suggestions.md) for the full 4-phase roadmap.
+
 ---
 
 ## 1. The Core Vision: Immortal Research Programs
@@ -371,6 +389,7 @@ agent-social-networks/
 └── suggestion_box/           # External contributions
     ├── agentic-swarms-scientific-breakthroughs.md  # Minimax GATO synthesis
     ├── manus-literature-review-2026-02-02.md       # Comprehensive lit review
+    ├── research_insights_and_suggestions.md        # Kimi K2.5 implementation roadmap
     └── Analysis Report...    # twin.so hallucination audit
 ```
 
@@ -401,4 +420,4 @@ Key sources:
 ---
 
 *Document created: 2026-02-01*  
-*Last updated: 2026-02-02 (literature review integration)*
+*Last updated: 2026-02-02 (Kimi K2.5 implementation roadmap)*
