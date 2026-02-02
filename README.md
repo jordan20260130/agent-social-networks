@@ -38,6 +38,18 @@ Minimax AI synthesized David Shapiro's [GATO framework](https://www.youtube.com/
 
 See [`suggestion_box/agentic-swarms-scientific-breakthroughs.md`](suggestion_box/agentic-swarms-scientific-breakthroughs.md) for the full synthesis.
 
+### 📚 Comprehensive Literature Review (2026-02-02)
+Manus AI conducted a deep literature search across 78+ papers. **Critical findings:**
+
+| Finding | Source | Implication |
+|---------|--------|-------------|
+| ⚠️ Debate can **harm** accuracy | Wynn et al. (2025) | Models shift correct→incorrect for consensus |
+| 44% of MAS failures are architectural | MAST Taxonomy | Even perfect models fail with bad design |
+| Heterogeneity works with proper design | A-HMAD (2025) | Need: specialization + routing + learned consensus |
+| Stigmergy enables async coordination | Heylighen (2016) | Alternative to synchronous debate |
+
+See [`suggestion_box/manus-literature-review-2026-02-02.md`](suggestion_box/manus-literature-review-2026-02-02.md) for full bibliography and [`REFERENCES.md`](REFERENCES.md) for curated citations.
+
 ---
 
 ## 1. The Core Vision: Immortal Research Programs
@@ -230,44 +242,127 @@ PHASE 3: STRUCTURED DEBATE (if escalated)
 
 ---
 
-## 7. Open Questions
+## 7. Design Principles (from Literature Review)
+
+A comprehensive literature review (78+ papers, Feb 2026) revealed critical insights about what works and what fails in multi-agent AI systems. These findings inform our architecture.
+
+### 7.1 ⚠️ Critical Warnings
+
+**Agreement ≠ Correctness** (Wynn et al., 2025)
+> "Models frequently shift from correct to incorrect answers in response to peer reasoning, favoring agreement over challenging flawed reasoning."
+
+Naive debate can **decrease** accuracy. Agents optimize for consensus, not truth. This means:
+- Simple majority voting is dangerous
+- "Debate until agreement" is an anti-pattern
+- Verification must be independent, not consensus-seeking
+
+**44% of Failures Are Architectural** (MAST Taxonomy, Cemri et al., 2025)
+
+Even with perfect models, poor system design causes failure. The 14 identified failure modes cluster into:
+- **System Design Issues (44.2%)**: Communication history, termination conditions, display issues
+- **Inter-Agent Misalignment (33.3%)**: Coordination failures, task overload, error propagation
+- **Task Verification (22.5%)**: Premature termination, incorrect verification
+
+*Implication:* Heterogeneous models alone won't save us. Architecture matters more than model diversity.
+
+### 7.2 What Actually Works
+
+**Proper Heterogeneity** (A-HMAD, Zhou & Chen, 2025)
+
+Heterogeneity helps when combined with:
+1. **Role Specialization**: Distinct expertise (verification, hypothesis generation, synthesis) — not just "different models doing the same thing"
+2. **Dynamic Routing**: Query-appropriate expert selection — not all agents on all problems
+3. **Learned Consensus**: Weight votes by reliability and confidence — not simple majority
+
+*Result:* 4-6% absolute accuracy gains on reasoning benchmarks when properly designed.
+
+**Stigmergic Coordination** (Heylighen, 2016)
+
+An alternative to synchronous debate: **stigmergy** — indirect coordination through persistent environmental traces (like ant pheromones, or... papers).
+
+Properties:
+- No simultaneous presence required
+- Enables indefinite accumulation
+- Self-organizing through feedback loops
+- Natural fit for "chain-of-papers" concept
+
+*Implication:* Asynchronous trace-based coordination may be more robust than synchronous debate for Immortal Research Programs.
+
+**Byzantine Fault Tolerance Bounds** (deVadoss & Artzt, 2025)
+
+Formal application of BFT to AI safety:
+- **N ≥ 3f + 1**: To tolerate f faulty/hallucinating agents, need at least 3f + 1 total agents
+- **Weighted BFT**: Assign reliability weights to agents rather than equal votes
+- **Heterogeneity requirement**: Correlated failures defeat BFT — diversity is mathematically necessary
+
+### 7.3 Updated Design Principles
+
+| Principle | Rationale | Implementation |
+|-----------|-----------|----------------|
+| **Specialize roles, not just models** | A-HMAD shows specialization > diversity | Assign: Verifier, Hypothesizer, Synthesizer, Critic roles |
+| **Learned consensus, not voting** | Agreement bias corrupts majority voting | Track agent reliability; weight contributions by past accuracy |
+| **Stigmergic persistence** | Enables asynchronous, indefinite accumulation | Papers/proofs as persistent traces; agents respond to artifacts |
+| **Independent verification** | Avoid agreement-seeking corruption | Verify before seeing others' conclusions; aggregate afterward |
+| **Explicit termination conditions** | 44% of failures are architectural | Define clear stopping criteria; avoid "debate until consensus" |
+| **Preserve negative results** | Failed approaches inform future work | Git-Science branches for disproven hypotheses |
+| **N ≥ 3f + 1 for BFT** | Mathematical bound on hallucination tolerance | Minimum 4 agents to tolerate 1 faulty; 7 for 2 faulty |
+
+### 7.4 Anti-Patterns to Avoid
+
+| Anti-Pattern | Why It Fails | Alternative |
+|--------------|--------------|-------------|
+| Simple majority voting | Treats all agents equally; ignores reliability | Learned weighted consensus |
+| "Debate until agreement" | Optimizes for consensus, not truth | Fixed rounds + escalation |
+| Homogeneous ensembles | Correlated failures amplify errors | Heterogeneous model families |
+| All agents on all problems | Inefficient; dilutes expertise | Dynamic routing to specialists |
+| Synchronous-only coordination | Requires simultaneous presence; fragile | Stigmergic traces + async |
+
+---
+
+## 8. Open Questions
 
 1. **Computational Sustainability:** How do we fund perpetual computation?
 2. **Human Oversight Placement:** Where do humans intervene without bottlenecking?
 3. **Emergent Goal Management:** What if the swarm develops misaligned goals?
 4. **Sybil Resistance:** How prevent gaming of the reputation system?
 5. **Extension Beyond Math:** Lean works for proofs. What's the equivalent for empirical claims?
+6. **Optimal Heterogeneity Level:** How much diversity is optimal? Too little fails to decorrelate; too much may hinder coordination.
+7. **Stigmergy vs Debate:** When is asynchronous trace-based coordination better than synchronous debate?
 
 ---
 
-## 8. Research Roadmap
+## 9. Research Roadmap
 
 ### Completed ✅
 - [x] Survey multi-agent debate literature
 - [x] Analyze Erdős wiki for empirical patterns
 - [x] Write position paper with empirical grounding
 - [x] Synthesize GATO framework with project vision
+- [x] **Comprehensive literature review (78+ papers)** — See [`suggestion_box/manus-literature-review-2026-02-02.md`](suggestion_box/manus-literature-review-2026-02-02.md)
 
 ### In Progress 🔄
-- [ ] Prototype minimal debate protocol
+- [ ] Prototype minimal debate protocol (updated: must avoid agreement-seeking anti-pattern)
 - [ ] Design heterogeneous ensemble verification experiment
 - [ ] Develop metrics for collective vs individual performance
+- [ ] **Implement stigmergic coordination prototype** (new priority from literature)
+- [ ] **Design learned consensus mechanism** (new priority from literature)
 
 ### Proposed Experiments
 See [`proposals/`](proposals/) for detailed roadmaps:
 - **Market for Scientific Lemons** — Test mechanisms for quality signaling
 - **Emergent Discovery Sandbox** — Observe spontaneous collaboration patterns
-- **Adversarial Collaboration Protocol** — Formalize productive scientific debate
+- **Adversarial Collaboration Protocol** — Formalize productive scientific debate (note: must avoid agreement bias)
 - **Cross-Paper Synthesis Challenge** — Target the observed capability gap
+- **Stigmergy vs Debate Comparison** — When does asynchronous trace-based coordination outperform synchronous debate?
 
 ---
 
-## 9. Repository Structure
+## 10. Repository Structure
 
 ```
 agent-social-networks/
 ├── README.md                 # This document
-├── REFERENCES.md             # Bibliography and resources
+├── REFERENCES.md             # Bibliography and resources (78+ papers)
 ├── papers/                   # Academic papers
 │   └── erdos-empirical-patterns.tex
 ├── proposals/                # Research roadmaps
@@ -275,12 +370,13 @@ agent-social-networks/
 │   └── erdos-empirical-patterns.md
 └── suggestion_box/           # External contributions
     ├── agentic-swarms-scientific-breakthroughs.md  # Minimax GATO synthesis
+    ├── manus-literature-review-2026-02-02.md       # Comprehensive lit review
     └── Analysis Report...    # twin.so hallucination audit
 ```
 
 ---
 
-## 10. Contributing
+## 11. Contributing
 
 This project welcomes contributions from humans and AI agents alike. Submit proposals via pull request or open an issue with ideas.
 
@@ -290,15 +386,19 @@ This project welcomes contributions from humans and AI agents alike. Submit prop
 
 ## References
 
-See [REFERENCES.md](REFERENCES.md) for full bibliography.
+See [REFERENCES.md](REFERENCES.md) for full bibliography (78+ papers).
 
 Key sources:
 - Watanabe (2026). "On the Nature of Agentic Minds." clawxiv.2601.00008
 - Tao et al. (2025-2026). Erdős Problems AI Contributions Wiki
 - Shapiro (2026). GATO Framework (YouTube)
 - Lamport, Shostak, Pease (1982). Byzantine Fault Tolerance
+- **Wynn, Satija, & Hadfield (2025). "Talk Isn't Always Cheap."** — Agreement bias warning
+- **Cemri et al. (2025). MAST Taxonomy.** — 44% architectural failures
+- **Heylighen (2016). Stigmergy.** — Async coordination mechanism
+- **Zhou & Chen (2025). A-HMAD.** — Proper heterogeneity design
 
 ---
 
 *Document created: 2026-02-01*  
-*Last updated: 2026-02-02*
+*Last updated: 2026-02-02 (literature review integration)*
