@@ -11,6 +11,7 @@
 - Minimax AI (2026). "Agentic AI Swarms for Scientific Breakthroughs." [`suggestion_box/agentic-swarms-scientific-breakthroughs.md`](suggestion_box/agentic-swarms-scientific-breakthroughs.md)
 - twin.so (2026). "Erdős Paper Hallucination Audit." [`suggestion_box/`](suggestion_box/)
 - Manus AI (2026). "Heterogeneous Multi-Agent AI Systems Literature Review." [`suggestion_box/manus-literature-review-2026-02-02.md`](suggestion_box/manus-literature-review-2026-02-02.md) — **78 papers, comprehensive**
+- Kimi K2.5 (2026). "Research Insights and Suggestions for Agent Social Networks." [`suggestion_box/research_insights_and_suggestions.md`](suggestion_box/research_insights_and_suggestions.md) — **Implementation roadmap with 5 key insights**
 
 ---
 
@@ -52,6 +53,45 @@ These papers contain findings essential for avoiding major pitfalls:
 - [ ] **deVadoss, J. & Artzt, M. (2025). "A Byzantine Fault Tolerance Approach Towards AI Safety."** arXiv:2504.14668. — **Applies BFT formula (N ≥ 3f + 1) to AI systems. Mathematical bounds on hallucination tolerance.**
 
 - [ ] **"A Weighted Byzantine Fault Tolerance Consensus Driven Trusted Multi-LLM Framework."** (2025) arXiv:2505.05103 — **Weighted BFT: reliability-weighted fault tolerance for heterogeneous agents.**
+
+---
+
+## AI for Mathematical Discovery (DeepMind)
+
+### 🔑 Key Breakthroughs (from Kimi K2.5 synthesis)
+
+#### AlphaProof (2024)
+- [ ] Hubert, T. et al. (2024). "AlphaProof: AI for Formal Mathematics." *Nature*. — **First AI system to achieve IMO silver-medal performance under formal conditions. Key innovation: test-time RL—generating problem variants and training on them before attempting the main problem.**
+
+#### FunSearch (2023)
+- [ ] Romera-Paredes, B. et al. (2023). "Mathematical discoveries from program search with large language models." *Nature*. arXiv:2309.02840. https://github.com/google-deepmind/funsearch — **First LLM-based discoveries in open mathematical problems. Found new constructions for cap set problem, improving bounds that stood for 20 years. Key insight: searching in "function space" (programs that generate solutions) rather than solution space.**
+
+#### AlphaEvolve (2025)
+- [ ] DeepMind (2025). "AlphaEvolve: A Gemini-powered coding agent for general-purpose algorithm discovery." White Paper. https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/ — **Discovered faster matrix multiplication algorithms (outperforming Strassen's 1969 method in some cases). Improved TPU chip designs. Saved 0.7% of Google's total computing resources. Solved open problems in extremal combinatorics.**
+
+### Multi-Agent Mathematical Reasoning Frameworks
+
+| Framework | Agents | Key Innovation |
+|-----------|--------|----------------|
+| MACM | Thinker, Judge, Executor | Iterative Conditional Mining |
+| MLPO | Leader + Peer Team | Hierarchical RL with GRPO |
+| SIER | Swarm Intelligence Enhanced Reasoning | Density-driven optimization (KDE + Non-Dominated Sorting) |
+| DiMo | Divergent + Logical Thinkers | Dual cognitive modes |
+| Aristotle | Informal + Formal + Geometry | Interleaved reasoning with lemma drafting |
+
+- [ ] "MACM: Multi-Agent System for Conditional Mining." — **State-of-the-art on MATH Level 5**
+- [ ] "MLPO: Multi-agent guided Leader Policy Optimization." — **Trained leader synthesizes diverse peer outputs**
+- [ ] "SIER: Swarm Intelligence Enhanced Reasoning." — **Prevents local optima in reasoning via KDE + non-dominated sorting**
+- [ ] "DiMo: Divergent Thinking in Multi-Agent Systems." — **Dual cognitive modes, significant gains on GSM-hard**
+
+### AgentRxiv (2024)
+- [ ] AgentRxiv Collaboration (2024). "Towards Collaborative Autonomous Research." https://agentrxiv.github.io/ — **Parallel autonomous laboratories sharing discoveries via common archive. Multiple labs concurrently developed reasoning techniques (RFP, ADMPT, Adaptive Token-Level Gradient Reweighting), raising MATH-500 accuracy from 70.2% to 79.8%. Key insight: parallel experimentation with immediate result sharing accelerates discovery.**
+
+### Emergent Role Specialization
+- [ ] Wang, T. et al. (2020). "ROMA: Multi-Agent Reinforcement Learning with Emergent Roles." ICML. — **Roles emerge dynamically based on task structure; agents specialize on sub-tasks and share learning within role groups. Better than predefined roles.**
+
+### Scientific Machine Learning
+- [ ] "AGENTIC-SciML: Collaborative Multi-Agent Systems for Emergent Discovery in Scientific Machine Learning." — **Specialized agents: PINN-enforcers, Neural Operator generalizers, critics, designers. Enables autonomous model refinement.**
 
 ---
 
@@ -218,4 +258,4 @@ Based on comprehensive literature review (2026-02-02, 78+ papers), our project's
 
 ---
 
-*Last updated: 2026-02-02 (comprehensive Manus review)*
+*Last updated: 2026-02-02 (Kimi K2.5 implementation roadmap references)*
