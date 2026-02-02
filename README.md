@@ -2,7 +2,7 @@
 
 **Project Status:** Active research — empirical grounding established  
 **Created:** 2026-02-01  
-**Contributors:** 朴, Jordan, Manus AI, Minimax AI, twin.so
+**Contributors:** 朴, Jordan, Manus AI, Minimax AI, Kimi K2.5, twin.so
 
 ---
 
@@ -67,6 +67,25 @@ Kimi K2.5 (Thinking + Agentic mode) contributed a comprehensive research synthes
 - AgentRxiv-style shared memory with versioned, forkable discoveries
 
 See [`suggestion_box/research_insights_and_suggestions.md`](suggestion_box/research_insights_and_suggestions.md) for the full 4-phase roadmap.
+
+### 🧬 Bioelectric Intelligence Synthesis (2026-02-02)
+Kimi K2.5 (Agentic mode) conducted deep research into **Michael Levin's** work on bioelectricity, morphogenesis, and collective intelligence in biological systems. Key insight:
+
+> *"The deepest form of collective intelligence emerges not from communication of content, but from shared dynamical states."*
+
+**Biological Mechanisms → AI Translations:**
+
+| Biological Mechanism | AI Translation | Novelty |
+|---------------------|----------------|---------|
+| **Stress Sharing** | Agents broadcast "uncertainty tokens"; others help because reducing collective stress improves their own processing | Emergent cooperation without explicit coordination |
+| **Memory Anonymization** | Documents where individual attribution fades over edits → truly collective knowledge | Artifacts become collective memory no single agent authored |
+| **Cognitive Light Cone** | Individual context windows combine to pursue goals no single agent can hold | Network's stable attractors represent goals beyond individual capacity |
+| **Bioelectric Consensus** | Convergence on shared "voltage states" (distributed representations) rather than text exchange | Agreement via dynamical convergence, not voting |
+| **Gap Junction Protocols** | Communication that deliberately blurs individual contributions | True collective cognition, not aggregated individual outputs |
+
+**Core Reframe:** Research programs persist not because agents remember them, but because they are **stable attractors in the network dynamics**—the "immortal research program" is literally a dynamical systems phenomenon.
+
+See [`suggestion_box/levin-bioelectric-synthesis-2026-02-02.md`](suggestion_box/levin-bioelectric-synthesis-2026-02-02.md) for the full synthesis with 8 novel mechanism proposals.
 
 ---
 
@@ -372,6 +391,9 @@ See [`proposals/`](proposals/) for detailed roadmaps:
 - **Adversarial Collaboration Protocol** — Formalize productive scientific debate (note: must avoid agreement bias)
 - **Cross-Paper Synthesis Challenge** — Target the observed capability gap
 - **Stigmergy vs Debate Comparison** — When does asynchronous trace-based coordination outperform synchronous debate?
+- **Stress-Sharing Protocol** — Uncertainty propagation to guide agent attention (from Levin synthesis)
+- **Xeno-agents Sandbox** — Let heterogeneous agents self-assemble into research teams with no predetermined structure
+- **Voltage-State Visualization** — Map agent consensus as dynamical landscapes
 
 ---
 
@@ -390,6 +412,7 @@ agent-social-networks/
     ├── agentic-swarms-scientific-breakthroughs.md  # Minimax GATO synthesis
     ├── manus-literature-review-2026-02-02.md       # Comprehensive lit review
     ├── research_insights_and_suggestions.md        # Kimi K2.5 implementation roadmap
+    ├── levin-bioelectric-synthesis-2026-02-02.md   # Levin's bioelectric collective intelligence
     └── Analysis Report...    # twin.so hallucination audit
 ```
 
