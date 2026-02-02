@@ -10,6 +10,7 @@
 - Jordan (2026). "Erdős Empirical Patterns Analysis." [`proposals/erdos-empirical-patterns.md`](proposals/erdos-empirical-patterns.md)
 - Minimax AI (2026). "Agentic AI Swarms for Scientific Breakthroughs." [`suggestion_box/agentic-swarms-scientific-breakthroughs.md`](suggestion_box/agentic-swarms-scientific-breakthroughs.md)
 - twin.so (2026). "Erdős Paper Hallucination Audit." [`suggestion_box/`](suggestion_box/)
+- Manus AI (2026). "Heterogeneous Multi-Agent AI Systems Literature Review." [`suggestion_box/manus-literature-review-2026-02-02.md`](suggestion_box/manus-literature-review-2026-02-02.md) — **78 papers, comprehensive**
 
 ---
 
@@ -30,13 +31,37 @@
 
 ---
 
+## 🚨 Critical Papers (Must Read)
+
+These papers contain findings essential for avoiding major pitfalls:
+
+### Failure Mode Analysis
+- [ ] **Cemri, M. et al. (2025). "Why Do Multi-Agent LLM Systems Fail?"** NeurIPS 2025 Datasets & Benchmarks. arXiv:2503.13657. 188 citations. — **MAST Taxonomy: 44% of failures are architectural, not model-related. 14 failure modes identified. Even perfect models fail with poor architecture.**
+
+- [ ] **Wynn, A., Satija, H., & Hadfield, G. (2025). "Talk Isn't Always Cheap: Understanding Failure Modes in Multi-Agent Debate."** ICML MAS Workshop. arXiv:2509.05396. — **⚠️ CRITICAL: Debate can HARM accuracy. Models shift from correct→incorrect answers to achieve agreement. Agreement ≠ correctness.**
+
+### What Actually Works
+- [ ] **Zhou, Y. & Chen, Y. (2025). "Adaptive Heterogeneous Multi-Agent Debate for Enhanced Educational and Factual Reasoning."** *J. King Saud Univ.* — **A-HMAD: Shows heterogeneity works when properly designed. Specialized roles + dynamic routing + learned consensus = 4-6% gains. NOT just using different models.**
+
+- [ ] **Wood, D. et al. (2023). "A Unified Theory of Diversity in Ensemble Learning."** *JMLR* Vol. 24. 132 citations. — **Mathematical foundations for why/when diversity helps.**
+
+### Alternative Architectures
+- [ ] **Heylighen, F. (2016). "Stigmergy as a Universal Coordination Mechanism I: Definition and Components."** *Cognitive Systems Research* Vol. 38. 328 citations. — **Stigmergy: Indirect coordination through persistent traces. Enables complex coordination WITHOUT synchronous presence. Natural fit for "chain-of-papers" concept.**
+
+### Byzantine Fault Tolerance for AI
+- [ ] **deVadoss, J. & Artzt, M. (2025). "A Byzantine Fault Tolerance Approach Towards AI Safety."** arXiv:2504.14668. — **Applies BFT formula (N ≥ 3f + 1) to AI systems. Mathematical bounds on hallucination tolerance.**
+
+- [ ] **"A Weighted Byzantine Fault Tolerance Consensus Driven Trusted Multi-LLM Framework."** (2025) arXiv:2505.05103 — **Weighted BFT: reliability-weighted fault tolerance for heterogeneous agents.**
+
+---
+
 ## Related Work: AI for Scientific Discovery
 
 ### 🔑 Key Systems (Direct Competitors/Peers)
 
 #### Sakana AI — The AI Scientist
 - [x] Lu, C. et al. (2024). "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery." arXiv:2408.06292. https://github.com/SakanaAI/AI-Scientist — **First end-to-end automated discovery system**
-- [ ] Yamada, Y. et al. (2025). "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search." https://github.com/SakanaAI/AI-Scientist-v2 — **First AI-generated peer-reviewed paper**
+- [ ] Yamada, Y. et al. (2025). "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search." arXiv:2504.08066. 124 citations. https://github.com/SakanaAI/AI-Scientist-v2 — **First AI-generated peer-reviewed paper**
 - [ ] Evaluating Sakana's AI Scientist (2025). arXiv:2502.14297 — Critical evaluation
 
 #### Google — AI Co-Scientist
@@ -54,11 +79,12 @@
 #### Deep Research
 - [ ] Weidener, L. et al. (2026). "Rethinking the AI Scientist: Interactive Multi-Agent Workflows for Scientific Discovery." arXiv:2601.12542 — **SOTA on BixBench, minutes vs hours turnaround**
 
-### 📚 Survey Papers (Must Read)
+### 📚 Survey Papers
 
 - [ ] **"Towards Scientific Intelligence: A Survey of LLM-based Scientific Agents."** arXiv:2503.24047 (Mar 2025). 34 pages, comprehensive roadmap.
 - [ ] **"Agentic AI for Scientific Discovery: A Survey of Progress, Challenges, and Future Directions."** arXiv:2503.08979 (Mar 2025). Categorizes systems across chemistry, biology, materials science.
-- [ ] **"Collective Intelligence: On the Promise and Reality of Multi-Agent Systems for AI-Driven Scientific Discovery."** Preprints.org 202508.1640 (Aug 2025). **Directly relevant** — maps research workflow to MAS potential.
+- [ ] **"Collective Intelligence: On the Promise and Reality of Multi-Agent Systems for AI-Driven Scientific Discovery."** Preprints.org 202508.1640 (Aug 2025). — Maps research workflow to MAS potential.
+- [ ] **"Scientific Discovery in the Age of Artificial Intelligence."** *Nature* (2023). — Authoritative overview.
 
 ---
 
@@ -67,44 +93,70 @@
 ### Multi-Agent Debate & Deliberation
 - [x] Du, Y. et al. (2023). "Improving Factuality and Reasoning in Language Models through Multiagent Debate." ICML 2024. arXiv:2305.14325 — **Foundational paper, "society of minds"**
 - [ ] Liang, T. et al. (2023). "Encouraging Divergent Thinking in Large Language Models through Multi-Agent Debate"
-- [ ] Chan, C. et al. (2023). "ChatEval: Towards Better LLM-based Evaluators through Multi-Agent Debate"
+- [ ] Chan, C. et al. (2023). "ChatEval: Towards Better LLM-based Evaluators through Multi-Agent Debate." arXiv:2308.07201
 - [ ] Li, Y. et al. (2024). "Improving Multi-Agent Debate with Sparse Communication Topology." EMNLP 2024. — **41% token reduction while preserving accuracy**
 - [ ] "Can LLM Agents Really Debate?" arXiv:2511.07784 (Nov 2025) — **Process-level analysis, majority pressure effects**
-- [ ] "Adaptive Heterogeneous Multi-Agent Debate for Enhanced Educational and Factual Reasoning." *J. King Saud Univ.* (Nov 2025) — **Heterogeneous agent ensemble with specialized roles**
+- [ ] He, H. et al. (2025). "Debating Truth: Debate-Driven Claim Verification." arXiv:2507.19090
 
 ### Heterogeneous LLM Ensembles
 - [ ] **Awesome-LLM-Ensemble** (GitHub). https://github.com/junchenzhi/Awesome-LLM-Ensemble — Curated paper list
 - [ ] "Ensemble Learning for Heterogeneous Large Language Models with Deep Parallel Collaboration." arXiv:2404.12715 (Apr 2024) — **DeePEn framework, vocabulary alignment**
 - [ ] "Knowledge-Empowered, Collaborative, and Co-Evolving AI Models: The Post-LLM Roadmap." *ScienceDirect* (Dec 2024)
 - [ ] "MoCo: A One-Stop Shop for Model Collaboration Research." arXiv:2601.21257 (Jan 2026)
+- [ ] Saadaoui, S. et al. (2025). "Coordinated LLM Multi-Agent Systems for Collaborative Reasoning." *Knowledge-Based Systems*.
+- [ ] "Deep Neural Network Ensembles Against Deception." IEEE (2020) — **Error decorrelation through diversity**
+- [ ] "Verification-Aided Deep Ensemble Selection." FMCAD (2022) — **Formal methods for validating decorrelation**
+
+### Swarm Intelligence & Stigmergy
+- [ ] **Heylighen, F. (2016). "Stigmergy as a Universal Coordination Mechanism I."** *Cognitive Systems Research*. 328 citations. — **Key alternative to synchronous debate**
+- [ ] Bassanetti, T. et al. (2023). "Cooperation and Deception Through Stigmergic Interactions." *PLOS Computational Biology*.
+- [ ] Boldini, A. et al. (2024). "Stigmergy: From Mathematical Modelling to Control." *Royal Society Open Science*.
+- [ ] Valckenaers, P. et al. (2007). "MAS Coordination and Control Based on Stigmergy." *Computers in Industry*. 53 citations.
+
+### Long-Term Memory & Persistence
+- [ ] "Long Term Memory: The Foundation of AI Self-Evolution." arXiv:2410.15665 (2024) — **Knowledge accumulation over time**
+- [ ] "Human-Inspired Perspectives: A Survey on AI Long-Term Memory." arXiv:2411.00489 (2024) — **Taxonomy: semantic, procedural, episodic memory**
+- [ ] "Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory." arXiv:2504.19413 (2025) — **Production system**
+- [ ] "Preserving and Combining Knowledge in Robotic Lifelong Reinforcement Learning." *Nature Machine Intelligence* (2025) — **Rehearsal prevents catastrophic forgetting**
+
+### Collective Intelligence Theory
+- [ ] "The Network Science of Collective Intelligence." *Trends in Cognitive Sciences* (2022) — **Network structure alters collective intelligence**
+- [ ] Taylor, J. & Page, S. (2025). "AI Is Changing the Physics of Collective Intelligence." *Brookings*.
+- [ ] "AI-Enhanced Collective Intelligence." *Patterns* (2024) — **AI complements rather than replaces human CI**
+- [ ] Nobre, D.A. et al. (2020). "Prediction Diversity and Selective Attention in the Wisdom of Crowds." arXiv:2001.10039
+- [ ] Woolley, A. et al. (2010). "Evidence for a Collective Intelligence Factor in the Performance of Human Groups" — *Science*
+- [ ] Malone, T. & Bernstein, M. (2015). "Handbook of Collective Intelligence" — MIT Press
 
 ### Multi-Agent Safety & Risks
 - [x] Tomašev, N., Franklin, M., Jacobs, J., Krier, S., & Osindero, S. (2025). *Distributional AGI Safety*. arXiv:2512.16856 — **Read, informs sandbox economies**
 - [x] Hammond, L., Chan, A., Clifton, J., et al. (2025). *Multi-Agent Risks from Advanced AI*. arXiv:2502.14143 — **Read, informs emergent agency**
-
-### Collective Intelligence (Human)
-- [ ] Woolley, A. et al. (2010). "Evidence for a Collective Intelligence Factor in the Performance of Human Groups" — *Science*
-- [ ] Malone, T. & Bernstein, M. (2015). "Handbook of Collective Intelligence" — MIT Press
+- [ ] "Trustworthy Distributed AI Systems: Robustness, Privacy, and Governance." *ACM Computing Surveys* (2025)
 
 ### Science of Science
 - [ ] Fortunato, S. et al. (2018). "Science of Science" — *Science* review paper
 - [ ] Wang, D. & Barabási, A.L. (2021). "The Science of Science" — Cambridge University Press
 
-### Mixture of Experts
+### Mixture of Experts & Dynamic Routing
 - [ ] Shazeer, N. et al. (2017). "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer"
 - [ ] Fedus, W. et al. (2022). "Switch Transformers: Scaling to Trillion Parameter Models"
+- [ ] Hu, J. et al. (2025). "Efficient Dynamic Ensembling for Multiple LLM Experts." IJCAI 2025. — **DER: MDP formulation for expert routing**
+- [ ] Shalev, Y. et al. (2024). "Distributional Reasoning in LLMs." arXiv:2406.13858 — **Internal parallel reasoning processes**
 
 ### Byzantine Fault Tolerance
 - [x] Lamport, L., Shostak, R., & Pease, M. (1982). "The Byzantine Generals Problem." ACM TOPLAS. — **Classic, informs hallucination resistance**
 - [ ] Castro, M. & Liskov, B. (1999). "Practical Byzantine Fault Tolerance." OSDI.
+- [ ] "Byzantine Fault Tolerant Consensus for Lifelong and Online Multi-Agent Planning." DARS 2021.
+
+### Chain-of-Thought & Externalized Reasoning
+- [x] Wei, J. et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." 25,270 citations.
+- [ ] Kojima, T. et al. (2022). "Large Language Models are Zero-Shot Reasoners." 7,759 citations.
+- [ ] Nye, M. et al. (2021). "Scratchpads for Intermediate Computation with Language Models." ICLR. 948 citations.
+- [ ] "Externalized Reasoning Oversight: A Research Direction for Scalable Oversight." AI Alignment Forum (2022) — **Legibility penalty noted**
+- [ ] "Towards Reasoning Era: A Survey of Long Chain-of-Thought." arXiv:2503.09567 (2025)
 
 ### Epistemic Networks / Philosophy
 - [ ] Goldman, A. (1999). "Knowledge in a Social World" — epistemology of testimony
 - [ ] Zollman, K. (2007). "The Communication Structure of Epistemic Communities"
-
-### Chain-of-Thought
-- [ ] Wei, J. et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
-- [ ] Kojima, T. et al. (2022). "Large Language Models are Zero-Shot Reasoners"
 
 ### Multiple Discovery
 - [ ] Merton, R. (1961). "Singletons and Multiples in Scientific Discovery"
@@ -131,17 +183,30 @@
 
 ## Our Distinctive Angle
 
-Based on literature review (2026-02-02), our project's novel contributions appear to be:
+Based on comprehensive literature review (2026-02-02, 78+ papers), our project's novel contributions:
 
 1. **Heterogeneous Model Diversity as Core Feature**: Most systems use homogeneous models. We specifically leverage different model families (Claude/GPT/Gemini/DeepSeek) for failure mode decorrelation.
 
 2. **"Immortal Research Programs"**: Framing collective AI as cognitive institutions that persist beyond any individual agent's context window.
 
-3. **Chain-of-Papers Analogy**: Explicit connection between external memory/papers and chain-of-thought reasoning at collective scale.
+3. **Chain-of-Papers Analogy**: Explicit connection between external memory/papers and chain-of-thought reasoning at collective scale. Aligns with stigmergy literature.
 
 4. **Byzantine Fault Tolerance for Hallucination**: Adapting distributed systems theory specifically for collective verification.
 
 5. **Empirical Grounding in Erdős Data**: Unique dataset showing heterogeneous collaboration patterns in mathematical discovery.
+
+### Key Design Principles (from literature synthesis)
+
+**What works:**
+- Role specialization + learned consensus + error decorrelation + stigmergic persistence
+- Weighted BFT (N ≥ 3f + 1) for hallucination tolerance
+- Dynamic routing to appropriate experts
+
+**What fails:**
+- Simple diversity without architecture (44% of failures are architectural!)
+- Majority voting (treats all agents equally)
+- Agreement-seeking behavior (models shift correct→incorrect for consensus)
+- Poor system design (communication history, termination conditions)
 
 ---
 
@@ -153,4 +218,4 @@ Based on literature review (2026-02-02), our project's novel contributions appea
 
 ---
 
-*Last updated: 2026-02-02*
+*Last updated: 2026-02-02 (comprehensive Manus review)*
