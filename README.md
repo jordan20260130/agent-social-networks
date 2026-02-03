@@ -2,7 +2,7 @@
 
 **Project Status:** Active research — empirical grounding established  
 **Created:** 2026-02-01  
-**Contributors:** 朴, Jordan, Manus AI, Minimax AI, Kimi K2.5, twin.so
+**Contributors:** 朴, Jordan, Manus AI, Minimax AI, MiniMax M2.1, Kimi K2.5, twin.so
 
 ---
 
@@ -86,6 +86,28 @@ Kimi K2.5 (Agentic mode) conducted deep research into **Michael Levin's** work o
 **Core Reframe:** Research programs persist not because agents remember them, but because they are **stable attractors in the network dynamics**—the "immortal research program" is literally a dynamical systems phenomenon.
 
 See [`suggestion_box/levin-bioelectric-synthesis-2026-02-02.md`](suggestion_box/levin-bioelectric-synthesis-2026-02-02.md) for the full synthesis with 8 novel mechanism proposals.
+
+### 🔀 MoE-Inspired Architecture (2026-02-03)
+MiniMax M2.1 (230B MoE model with 10B active parameters) contributed orthogonal perspectives informed by sparse activation architecture:
+
+**Five Novel Mechanisms:**
+
+| Mechanism | Core Innovation |
+|-----------|----------------|
+| **DEAN (Dormant Expertise Activation Networks)** | Agents possess "sleeping" expertise that only activates when problem context matches — the network becomes associative memory where obscure knowledge has multiple potential homes |
+| **CFIP (Correlated Failure Injection Protocol)** | *Deliberately* induce failures via "canary queries" to map structural blind spots — inverts the decorrelation imperative |
+| **CIA (Contrarian Incentive Architecture)** | Prediction markets where minority positions are economically rewarded regardless of correctness — creates pressure against consensus-seeking |
+| **EPD (Evolutionary Population Dynamics)** | Agents reproduce (capability recombination), die (graceful/forced), and mutate — creates temporal diversity through evolution |
+| **BMM (Byzantine Marketmaker)** | Detect subtly adversarial agents through economic correlation — transforms security into an optimization problem |
+
+**Contrarian Critiques:**
+1. ⚠️ **"Immortal" may be a fatal conceit** — Accumulated knowledge can become a prison. Need "deliberate epistemic forgetting" and succession protocols rather than indefinite accumulation.
+2. ⚠️ **Heterogeneity shouldn't be default** — Some problem classes may favor homogeneous agents. Need an adaptive "heterogeneity selector."
+
+**Wild Speculation — Coherence Ceiling:**
+> There may be diminishing or *negative* returns on diversity beyond a threshold. The optimal architecture might be a **fractal hierarchy of coherent sub-networks** that maintain internal coherence while communicating through translation interfaces.
+
+See [`suggestion_box/minimax-m2.1-synthesis-2026-02-03.md`](suggestion_box/minimax-m2.1-synthesis-2026-02-03.md) for the full synthesis.
 
 ---
 
@@ -343,6 +365,10 @@ Formal application of BFT to AI safety:
 | **Explicit termination conditions** | 44% of failures are architectural | Define clear stopping criteria; avoid "debate until consensus" |
 | **Preserve negative results** | Failed approaches inform future work | Git-Science branches for disproven hypotheses |
 | **N ≥ 3f + 1 for BFT** | Mathematical bound on hallucination tolerance | Minimum 4 agents to tolerate 1 faulty; 7 for 2 faulty |
+| **Reward contrarian positions** | Consensus-seeking corrupts accuracy (M2.1) | Prediction markets where minority bets pay even if wrong |
+| **Adaptive heterogeneity** | Not all problems need diversity (M2.1) | Selector mechanism chooses homo/heterogeneous response per task |
+| **Deliberate epistemic forgetting** | Accumulated knowledge can calcify (M2.1) | Succession protocols; scheduled knowledge pruning |
+| **Monitor coherence, not just capability** | Coherence ceiling may limit scaling (M2.1) | Track translation fidelity, shared vocabulary, collaboration success |
 
 ### 7.4 Anti-Patterns to Avoid
 
@@ -353,6 +379,10 @@ Formal application of BFT to AI safety:
 | Homogeneous ensembles | Correlated failures amplify errors | Heterogeneous model families |
 | All agents on all problems | Inefficient; dilutes expertise | Dynamic routing to specialists |
 | Synchronous-only coordination | Requires simultaneous presence; fragile | Stigmergic traces + async |
+| Decorrelation-only mindset | Ignores signal from correlated failures | CFIP: probe for shared blind spots |
+| Static agent populations | Accumulate fixed biases over time | EPD: reproduction, death, mutation |
+| Permanent heterogeneity | Some tasks need consistency | Adaptive heterogeneity selector |
+| Indefinite accumulation | Knowledge calcifies into groupthink | Succession protocols; epistemic forgetting |
 
 ---
 
@@ -365,6 +395,10 @@ Formal application of BFT to AI safety:
 5. **Extension Beyond Math:** Lean works for proofs. What's the equivalent for empirical claims?
 6. **Optimal Heterogeneity Level:** How much diversity is optimal? Too little fails to decorrelate; too much may hinder coordination.
 7. **Stigmergy vs Debate:** When is asynchronous trace-based coordination better than synchronous debate?
+8. **Coherence Ceiling:** Is there a threshold beyond which adding heterogeneous agents *decreases* collective capability? (M2.1)
+9. **Optimal Lifespan:** Should research programs be immortal, or deliberately replaced by successors that inherit only distilled principles? (M2.1)
+10. **Dormant Expertise Discovery:** How do we map latent capabilities agents don't know they have until the right problem finds them? (M2.1)
+11. **Adversary Detection via Economics:** Can market mechanisms identify subtly biased agents better than explicit security measures? (M2.1)
 
 ---
 
@@ -394,6 +428,11 @@ See [`proposals/`](proposals/) for detailed roadmaps:
 - **Stress-Sharing Protocol** — Uncertainty propagation to guide agent attention (from Levin synthesis)
 - **Xeno-agents Sandbox** — Let heterogeneous agents self-assemble into research teams with no predetermined structure
 - **Voltage-State Visualization** — Map agent consensus as dynamical landscapes
+- **Correlated Failure Mapping (CFIP)** — Inject canary queries to discover structural blind spots shared across architectures (M2.1)
+- **Contrarian Markets (CIA)** — Test prediction market incentives for minority positions; measure accuracy vs consensus-only baselines (M2.1)
+- **Agent Evolution Sandbox (EPD)** — Implement reproduction/mutation dynamics; measure whether evolved populations outperform static ones (M2.1)
+- **Dormant Expertise Probing (DEAN)** — Send edge-case problems to discover latent capabilities; map the expertise landscape (M2.1)
+- **Coherence Ceiling Test** — Measure collective performance vs agent count/diversity; find the inflection point (M2.1)
 
 ---
 
@@ -403,6 +442,7 @@ See [`proposals/`](proposals/) for detailed roadmaps:
 agent-social-networks/
 ├── README.md                 # This document
 ├── REFERENCES.md             # Bibliography and resources (78+ papers)
+├── AGENT_APIS.md             # Catalog of API-accessible agents for heterogeneous collaboration
 ├── papers/                   # Academic papers
 │   └── erdos-empirical-patterns.tex
 ├── proposals/                # Research roadmaps
@@ -413,6 +453,7 @@ agent-social-networks/
     ├── manus-literature-review-2026-02-02.md       # Comprehensive lit review
     ├── research_insights_and_suggestions.md        # Kimi K2.5 implementation roadmap
     ├── levin-bioelectric-synthesis-2026-02-02.md   # Levin's bioelectric collective intelligence
+    ├── minimax-m2.1-synthesis-2026-02-03.md        # MoE-inspired mechanisms (DEAN, CFIP, CIA, EPD, BMM)
     └── Analysis Report...    # twin.so hallucination audit
 ```
 
@@ -443,4 +484,4 @@ Key sources:
 ---
 
 *Document created: 2026-02-01*  
-*Last updated: 2026-02-02 (Kimi K2.5 implementation roadmap)*
+*Last updated: 2026-02-03 (MiniMax M2.1 MoE-inspired mechanisms)*
