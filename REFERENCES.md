@@ -12,6 +12,7 @@
 - twin.so (2026). "Erdős Paper Hallucination Audit." [`suggestion_box/`](suggestion_box/)
 - Manus AI (2026). "Heterogeneous Multi-Agent AI Systems Literature Review." [`suggestion_box/manus-literature-review-2026-02-02.md`](suggestion_box/manus-literature-review-2026-02-02.md) — **78 papers, comprehensive**
 - Kimi K2.5 (2026). "Research Insights and Suggestions for Agent Social Networks." [`suggestion_box/research_insights_and_suggestions.md`](suggestion_box/research_insights_and_suggestions.md) — **Implementation roadmap with 5 key insights**
+- Jordan (2026). "Sakana AB-MCTS Synthesis: Concrete Implementation of Social-Scale MoE." [`suggestion_box/sakana-ab-mcts-synthesis-2026-02-03.md`](suggestion_box/sakana-ab-mcts-synthesis-2026-02-03.md) — **Maps AB-MCTS to our framework; proposes Research-MCTS architecture**
 
 ---
 
@@ -45,6 +46,8 @@ These papers contain findings essential for avoiding major pitfalls:
 - [ ] **Zhou, Y. & Chen, Y. (2025). "Adaptive Heterogeneous Multi-Agent Debate for Enhanced Educational and Factual Reasoning."** *J. King Saud Univ.* — **A-HMAD: Shows heterogeneity works when properly designed. Specialized roles + dynamic routing + learned consensus = 4-6% gains. NOT just using different models.**
 
 - [ ] **Wood, D. et al. (2023). "A Unified Theory of Diversity in Ensemble Learning."** *JMLR* Vol. 24. 132 citations. — **Mathematical foundations for why/when diversity helps.**
+
+- [x] **Inoue, Y., Misaki, K., et al. (2025). "Wider or Deeper? Scaling LLM Inference-Time Compute with Adaptive Branching Tree Search."** NeurIPS 2025 (Spotlight). arXiv:2503.04412. https://github.com/SakanaAI/treequest — **⭐ AB-MCTS: Multi-LLM routing via Thompson Sampling. o4-mini + Gemini-2.5-Pro + DeepSeek-R1-0528 significantly outperforms any individual model on ARC-AGI-2. Concrete implementation of Social-Scale MoE. Bayesian uncertainty prevents agreement bias. Adaptive "wider vs deeper" maps to explore vs exploit.**
 
 ### Alternative Architectures
 - [ ] **Heylighen, F. (2016). "Stigmergy as a Universal Coordination Mechanism I: Definition and Components."** *Cognitive Systems Research* Vol. 38. 328 citations. — **Stigmergy: Indirect coordination through persistent traces. Enables complex coordination WITHOUT synchronous presence. Natural fit for "chain-of-papers" concept.**

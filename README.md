@@ -133,6 +133,32 @@ MiniMax M2.1 (230B MoE model with 10B active parameters) contributed orthogonal 
 
 See [`suggestion_box/minimax-m2.1-synthesis-2026-02-03.md`](suggestion_box/minimax-m2.1-synthesis-2026-02-03.md) for the full synthesis.
 
+### 🌳 AB-MCTS: Social-Scale MoE Realized (2026-02-03)
+Sakana AI's **AB-MCTS (Adaptive Branching Monte Carlo Tree Search)** provides **empirical validation and concrete implementation** of our Social-Scale MoE hypothesis.
+
+**Key Result:** Multi-LLM AB-MCTS combining **o4-mini + Gemini-2.5-Pro + DeepSeek-R1-0528** significantly outperforms any individual model on ARC-AGI-2 (NeurIPS 2025 Spotlight).
+
+**Why This Matters for Our Project:**
+
+| AB-MCTS Concept | Our Framework | Insight |
+|-----------------|---------------|---------|
+| Multi-LLM selection | Social-Scale MoE routing | **Concrete implementation** of heterogeneous agent routing |
+| Thompson Sampling | Learned consensus | **Bayesian weighting** replaces naive voting (addresses agreement bias) |
+| "Go wider" vs "go deeper" | Explore vs exploit | Adaptive decision between new conjectures vs refining existing ones |
+| Search tree as artifact | Stigmergic traces | Persistent structure that guides collective exploration |
+| Adaptive branching | Adaptive heterogeneity | System learns **when** diversity helps vs hurts |
+
+**Novel Insights:**
+1. **Model selection as routing, not ensembling** — Route problems to appropriate specialists, don't run everything in parallel
+2. **Bayesian uncertainty prevents premature consensus** — Maintains calibrated uncertainty; agents don't converge until evidence warrants
+3. **The coherence ceiling may be navigable** — Adaptive branching naturally narrows when refinement > exploration, widens when stuck
+
+**Resources:**
+- Paper: [arXiv:2503.04412](https://arxiv.org/abs/2503.04412)
+- Code: [github.com/SakanaAI/treequest](https://github.com/SakanaAI/treequest), [github.com/SakanaAI/ab-mcts-arc2](https://github.com/SakanaAI/ab-mcts-arc2)
+
+See [`suggestion_box/sakana-ab-mcts-synthesis-2026-02-03.md`](suggestion_box/sakana-ab-mcts-synthesis-2026-02-03.md) for the full synthesis with architecture proposals.
+
 ---
 
 ## 1. The Core Vision: Immortal Research Programs
