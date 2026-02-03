@@ -223,10 +223,44 @@ These papers contain findings essential for avoiding major pitfalls:
 - **Reviewer3** — Related project by Natalie Khalil
 - **OpenClaw** — https://github.com/openclaw/openclaw — AI agent framework
 
-### Formal Verification
-- **Aristotle** — Lean theorem prover interface for AI agents
-- **Mathlib** — Mathematics library for Lean 4
-- **Lean** — https://leanprover.github.io/ — Interactive theorem prover
+### Theorem Proving & Formal Verification
+
+#### AI-Powered Theorem Provers
+
+| System | Architecture | Open Source | Notes |
+|--------|-------------|-------------|-------|
+| **Aristotle** (Harmonic) | SOTA LLM + Lean + geometry solver | Partial (Yuclid/Newclid) | IMO gold-medal level |
+| **Axiom Math** | Conjecture/Prover loop + Lean + knowledge graph | No | $64M seed, self-improving |
+| **Acorn** | Declarative proofs + small MLP heuristic | **Yes** (Apache 2.0) | Human-readable, growing library |
+
+**Aristotle** — [arXiv:2510.01346](https://arxiv.org/abs/2510.01346) — IMO-level automated theorem proving  
+Three components: Lean proof search, informal reasoning (lemma generation), dedicated geometry solver  
+Company: Harmonic (https://harmonic.fun)
+
+- [x] **Newclid/Yuclid** — https://github.com/Newclid/Newclid — **Open-source geometry component of Aristotle**  
+  - Yuclid: C++ DD/AR (deductive database / algebraic reasoning) engine, Apache 2.0  
+  - 500x faster than AlphaGeometry 1  
+  - Install: `pip install newclid[yuclid]`  
+  - **Forked:** https://github.com/jordan20260130/Newclid
+
+**Axiom Math** — https://axiommath.ai — "Self-improving superintelligent reasoner"  
+Architecture from interviews: Conjecture model ↔ Prover model ↔ Lean verification ↔ Knowledge graph  
+No papers or open source. See: [`suggestion_box/axiom-math-synthesis-2026-02-03.md`](suggestion_box/axiom-math-synthesis-2026-02-03.md)
+
+- [x] **Acorn** — https://acornprover.org — https://github.com/acornprover/acorn — **Fully open source theorem prover**  
+  - Declarative proof style (claims, not tactics) — more human-readable than Lean  
+  - Small MLP (16×16) for clause selection heuristic  
+  - "The more we contribute, the smarter the AI gets" — contributions improve the AI  
+  - Building toward miniF2F and PutnamBench benchmarks  
+  - **Forked:** https://github.com/jordan20260130/acorn, https://github.com/jordan20260130/acornlib  
+  - See: [`papers/acorn-sakana-synthesis.md`](papers/acorn-sakana-synthesis.md) — Proposal for Sakana-style enhancements
+
+#### Traditional Theorem Provers
+
+- **Lean 4** — https://leanprover.github.io/ — Interactive theorem prover, dominant in AI-math
+- **Mathlib** — https://github.com/leanprover-community/mathlib4 — Massive mathematics library for Lean 4
+- **Coq/Rocq** — https://coq.inria.fr/ — Mature proof assistant, strong in program verification
+- **Agda** — https://agda.readthedocs.io/ — Dependently typed, cubical variant supports HoTT natively
 
 ### Homotopy Type Theory / Univalent Foundations
 
