@@ -252,6 +252,73 @@ This represents a potentially novel research direction: using HoTT's structural 
 - **Representation routing**: Match problems to agents based on which representation suits their architecture (proof-oriented Claude vs. computation-oriented models)
 - **Automatic knowledge fusion**: Discoveries in isomorphic domains merge without manual reconciliation
 
+### 2.5 The Curry-Howard Bridge: Programs, Proofs, and Training Data
+
+*This section is speculative — exploring implications rather than proposing immediate experiments.*
+
+**The Correspondence:**
+
+The Curry-Howard isomorphism establishes that **proofs are programs** and **types are propositions**:
+
+| Logic | Programming |
+|-------|-------------|
+| Proposition | Type |
+| Proof | Program (term) |
+| Implication A → B | Function type A → B |
+| Conjunction A ∧ B | Product type (A, B) |
+| Disjunction A ∨ B | Sum type Either A B |
+
+This means theorem provers like Lean, Coq, and Agda are *literally* programming languages — ones where the type checker verifies that your program (proof) has the correct type (proposition).
+
+**The Turing Completeness Argument:**
+
+Here's a philosophical observation: Lean 4 is implemented in Lean 4 (self-hosting). Before that, it was bootstrapped from C++. It *could* be implemented in Rust, or any other Turing-complete language.
+
+This implies something subtle: **a sufficiently capable model of a Turing-complete language implicitly "contains" all of formal mathematics**, in the sense that it could in principle:
+1. Implement a theorem prover
+2. Write proofs in that prover
+3. Verify those proofs
+
+The mathematical content isn't *directly* encoded — it's reachable through meta-level reasoning about what programs the language can express.
+
+**Why This Might Matter for Training:**
+
+| Language Property | Implication for LLM Training |
+|-------------------|------------------------------|
+| **Dependent types** (Lean, Coq) | Propositions directly encodable as types; proofs are first-class training data |
+| **Strong static types** (Rust, Haskell) | Compiler provides structured feedback; tighter distribution = more reliable generation |
+| **Turing complete** (all of the above) | In principle, all formal math is reachable — but the path may be very indirect |
+
+**The "Rust Hypothesis":**
+
+Recent work suggests that LLMs generate more reliable code in languages with:
+1. **Tighter training distributions** — Rust's cargo/rustfmt/Clippy culture filters for quality
+2. **Compiler-as-oracle** — Borrow checker provides immediate structured feedback for RL
+3. **Strong type systems** — More errors caught statically = better training signal
+
+See:
+- [Strand-Rust-Coder](https://huggingface.co/blog/Fortytwo-Network/strand-rust-coder-tech-report) — 191K synthetic Rust examples, +14% on benchmarks
+- [RunMat analysis](https://runmat.org/blog/rust-llm-training-distribution) — Why training distribution quality matters
+- [Oxen-AI GRPO](https://github.com/Oxen-AI/GRPO-With-Cargo-Feedback) — RL with cargo compiler feedback
+
+**The Speculation:**
+
+Could training on high-quality, statically-typed programming languages (Rust, Haskell) provide a better foundation for mathematical reasoning than training directly on formal proofs?
+
+Arguments *for*:
+- Larger corpus of high-quality code than formal proofs
+- Programming idioms (abstraction, composition, invariants) transfer to mathematical reasoning
+- Compiler feedback enables RL at scale
+
+Arguments *against*:
+- Dependent types encode propositions directly; static types don't
+- The "path through Turing completeness" to formal math is very indirect
+- Mathematical reasoning requires domain-specific concepts not present in systems programming
+
+**Our Take:**
+
+This remains genuinely uncertain. The Curry-Howard bridge suggests these skills are related, but the practical gap between "can implement a theorem prover" and "can do mathematics" is vast. Still, for heterogeneous agent architectures, the insight that *multiple paths lead to mathematical capability* — through formal proofs, through programming, through informal reasoning — reinforces the value of diversity.
+
 ---
 
 ## 3. Why Heterogeneity is Crucial
