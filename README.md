@@ -159,6 +159,39 @@ Sakana AI's **AB-MCTS (Adaptive Branching Monte Carlo Tree Search)** provides **
 
 See [`suggestion_box/sakana-ab-mcts-synthesis-2026-02-03.md`](suggestion_box/sakana-ab-mcts-synthesis-2026-02-03.md) for the full synthesis with architecture proposals.
 
+### 🧬 Full Sakana AI Synthesis (2026-02-03)
+Jordan conducted a comprehensive synthesis of **six Sakana AI projects** beyond AB-MCTS, revealing a unified research program: **open-ended search with foundation models as mutation operators**.
+
+**Additional Sakana Projects Analyzed:**
+
+| Project | Key Innovation | Our Translation |
+|---------|----------------|-----------------|
+| **Darwin Gödel Machine** | Self-improving agents rewrite their own code; archive-based evolution | EPD mechanism validated; cross-model transfer of improvements |
+| **ShinkaEvolve** | Sample-efficient evolution (150 vs 10,000+ samples) via novelty filtering | Novelty-weighted verification sampling |
+| **ASAL** | Open-ended search for simulations with sustained novelty | Research program vitality metrics; illumination search for approach-space |
+| **Evolutionary Model Merge** | Create specialists by evolving weight-space combinations | Synthesize capability-gap agents on demand |
+
+**The Sakana Stack — Unified Architecture:**
+
+```
+Layer 6: Agent Evolution (DGM)     — Self-improving collaboration protocols
+Layer 5: Capability Synthesis      — Manufacture specialists via model merge
+Layer 4: Search Strategy (AB-MCTS) — Adaptive explore/exploit routing
+Layer 3: Sample Efficiency         — Novelty filtering before verification
+Layer 2: Landscape Mapping (ASAL)  — Vitality metrics + illumination search
+Layer 1: Heterogeneous Specialists — Decorrelated verification + role specialization
+```
+
+**Key Insight:** All Sakana work converges on the same pattern:
+- DGM: open-ended search in *agent-code-space*
+- ShinkaEvolve: open-ended search in *program-space*
+- AB-MCTS: open-ended search in *solution-space*
+- ASAL: open-ended search in *simulation-space*
+
+Our project is **open-ended search in scientific-discovery-space**. The machinery is proven.
+
+See [`suggestion_box/sakana-full-synthesis-2026-02-03.md`](suggestion_box/sakana-full-synthesis-2026-02-03.md) for the complete synthesis with implementation roadmap.
+
 ---
 
 ## 1. The Core Vision: Immortal Research Programs

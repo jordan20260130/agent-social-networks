@@ -13,6 +13,7 @@
 - Manus AI (2026). "Heterogeneous Multi-Agent AI Systems Literature Review." [`suggestion_box/manus-literature-review-2026-02-02.md`](suggestion_box/manus-literature-review-2026-02-02.md) — **78 papers, comprehensive**
 - Kimi K2.5 (2026). "Research Insights and Suggestions for Agent Social Networks." [`suggestion_box/research_insights_and_suggestions.md`](suggestion_box/research_insights_and_suggestions.md) — **Implementation roadmap with 5 key insights**
 - Jordan (2026). "Sakana AB-MCTS Synthesis: Concrete Implementation of Social-Scale MoE." [`suggestion_box/sakana-ab-mcts-synthesis-2026-02-03.md`](suggestion_box/sakana-ab-mcts-synthesis-2026-02-03.md) — **Maps AB-MCTS to our framework; proposes Research-MCTS architecture**
+- Jordan (2026). "Sakana AI Full Synthesis: A Research Program for Immortal Research Programs." [`suggestion_box/sakana-full-synthesis-2026-02-03.md`](suggestion_box/sakana-full-synthesis-2026-02-03.md) — **Comprehensive synthesis of 6 Sakana projects (DGM, ShinkaEvolve, ASAL, AB-MCTS, Model Merge, AI Scientist). Proposes unified "Sakana Stack" architecture.**
 
 ---
 
@@ -102,10 +103,18 @@ These papers contain findings essential for avoiding major pitfalls:
 
 ### 🔑 Key Systems (Direct Competitors/Peers)
 
-#### Sakana AI — The AI Scientist
+#### Sakana AI — The AI Scientist & Open-Ended Evolution
 - [x] Lu, C. et al. (2024). "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery." arXiv:2408.06292. https://github.com/SakanaAI/AI-Scientist — **First end-to-end automated discovery system**
 - [ ] Yamada, Y. et al. (2025). "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search." arXiv:2504.08066. 124 citations. https://github.com/SakanaAI/AI-Scientist-v2 — **First AI-generated peer-reviewed paper**
 - [ ] Evaluating Sakana's AI Scientist (2025). arXiv:2502.14297 — Critical evaluation
+
+- [x] **Zhang, J. et al. (2025). "Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents."** arXiv:2505.22954. https://github.com/jennyzzt/dgm — **⭐ Self-improving agents that rewrite their own code. Archive-based open-ended evolution. SWE-bench: 20%→50%. Improvements transfer across model families. Validates EPD mechanism from M2.1 synthesis.**
+
+- [x] **Jiang, Y. et al. (2025). "ShinkaEvolve: Towards Open-Ended And Sample-Efficient Program Evolution."** arXiv:2509.19349. https://github.com/SakanaAI/ShinkaEvolve — **⭐ Sample-efficient evolutionary search (150 samples vs 10,000+ for AlphaEvolve). Novelty-based rejection sampling + bandit LLM selection. Circle packing SOTA. Applicable to our verification efficiency.**
+
+- [x] **Kumar, A. et al. (2024). "Automating the Search for Artificial Life with Foundation Models."** arXiv:2412.17799. https://github.com/SakanaAI/asal — **⭐ ASAL: Three search modes—supervised target, open-endedness, illumination. Historical novelty as health metric. Directly applicable to "research program vitality" measurement.**
+
+- [ ] Akiba, T. et al. (2024). "Evolutionary Optimization of Model Merging Recipes." arXiv:2403.13187. https://github.com/SakanaAI/evolutionary-model-merge — **Create specialized models by evolving weight-space combinations. Potential for synthesizing capability-gap specialists.**
 
 #### Google — AI Co-Scientist
 - [ ] Google Research (2025). "Towards an AI co-scientist." arXiv:2502.18864 — **Multi-agent system on Gemini 2.0, "generate-debate-evolve" approach**
