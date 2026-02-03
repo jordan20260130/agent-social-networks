@@ -216,6 +216,27 @@ These papers contain findings essential for avoiding major pitfalls:
 - **Mathlib** — Mathematics library for Lean 4
 - **Lean** — https://leanprover.github.io/ — Interactive theorem prover
 
+### Homotopy Type Theory / Univalent Foundations
+
+Libraries for formalizing mathematics with the univalence axiom (equivalent structures are equal):
+
+| Library | Platform | Notes |
+|---------|----------|-------|
+| **[UniMath](https://github.com/UniMath/UniMath)** | Coq/Rocq | Voevodsky's original, 993⭐ |
+| **[Cubical Agda](https://github.com/agda/cubical)** | Agda | Native computational univalence + HITs |
+| **[1Lab](https://1lab.dev/)** | Cubical Agda | Beautiful cross-linked reference |
+| **[Ground Zero](https://github.com/forked-from-1kasper/ground_zero)** | Lean 4 | HoTT in our primary prover |
+| **[jthulhu/2ltt](https://github.com/jthulhu/2ltt)** | Lean 4 | 2-level type theory approach |
+
+Key papers:
+- [ ] **Univalent Foundations Program (2013). "Homotopy Type Theory: Univalent Foundations of Mathematics."** https://homotopytypetheory.org/book/ — **The HoTT Book, canonical introduction**
+- [ ] **Vezzosi, A., Mörtberg, A., & Abel, A. (2019). "Cubical Agda: A Dependently Typed Programming Language with Univalence and Higher Inductive Types."** ICFP. https://dl.acm.org/doi/10.1145/3341691 — **Native computational univalence**
+- [ ] **Cohen, C. et al. (2024). "Trocq: Proof Transfer for Free, With or Without Univalence."** ESOP 2024. https://link.springer.com/chapter/10.1007/978-3-031-57262-3_10 — **Automatic proof transfer between equivalent representations**
+- [ ] **Grayson, D. (2018). "An introduction to univalent foundations for mathematicians."** arXiv:1711.01477 — **Accessible introduction for working mathematicians**
+- [ ] **Voevodsky, V. (2015). "An experimental library of formalized Mathematics based on the univalent foundations."** *Math. Struct. Comp. Sci.* — **Original UniMath paper**
+
+**Research gap:** No existing work connecting HoTT + multi-agent AI discovery. Potential novel direction for this project.
+
 ### Lean Formalization Projects
 - Alexeev, B. (2025). "Formalization of Erdős problems." Xena Project Blog. https://xenaproject.wordpress.com/2025/12/05/formalization-of-erdos-problems/
 
@@ -234,6 +255,8 @@ Based on comprehensive literature review (2026-02-02, 78+ papers), our project's
 4. **Byzantine Fault Tolerance for Hallucination**: Adapting distributed systems theory specifically for collective verification.
 
 5. **Empirical Grounding in Erdős Data**: Unique dataset showing heterogeneous collaboration patterns in mathematical discovery.
+
+6. **HoTT for Multi-Agent Unification** *(speculative)*: Using homotopy type theory's univalence axiom to automatically transfer/unify proofs between agents reasoning in different-but-equivalent representations. No existing work in this intersection.
 
 ### Key Design Principles (from literature synthesis)
 
@@ -258,4 +281,4 @@ Based on comprehensive literature review (2026-02-02, 78+ papers), our project's
 
 ---
 
-*Last updated: 2026-02-02 (Kimi K2.5 implementation roadmap references)*
+*Last updated: 2026-02-03 (HoTT/Univalent Foundations section)*

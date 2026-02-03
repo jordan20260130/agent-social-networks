@@ -87,6 +87,30 @@ Kimi K2.5 (Agentic mode) conducted deep research into **Michael Levin's** work o
 
 See [`suggestion_box/levin-bioelectric-synthesis-2026-02-02.md`](suggestion_box/levin-bioelectric-synthesis-2026-02-02.md) for the full synthesis with 8 novel mechanism proposals.
 
+### 🎯 Axiom Math Analysis (2026-02-03)
+Jordan analyzed [Axiom Math](https://axiommath.ai) ($64M seed, building "self-improving superintelligent reasoner"). Their architecture is a **minimal multi-agent system** that validates several of our hypotheses:
+
+| Axiom Component | Our Equivalent | Key Insight |
+|-----------------|----------------|-------------|
+| Prover-Conjecture loop | Role specialization | Architectural separation of generation vs verification |
+| Lean as oracle | Byzantine fault tolerance | **Non-neural verifier sidesteps agreement bias** |
+| Knowledge graph | Stigmergic persistence | Graph structure > flat document repos |
+| Auto-formalization | Multi-layer communication | Standardized translation between abstraction levels |
+| Curriculum adjustment | Adaptive heterogeneity | Meta-agent observes failures, generates targeted challenges |
+
+**Novel suggestion:** Add a **Curriculum Agent** role to swarms — observes what the network struggles with and generates challenges to address capability gaps.
+
+See [`suggestion_box/axiom-math-synthesis-2026-02-03.md`](suggestion_box/axiom-math-synthesis-2026-02-03.md) for full analysis.
+
+### 🔷 Homotopy Type Theory Connection (2026-02-03)
+Jordan identified a potential novel research direction: using **Homotopy Type Theory (HoTT)** and univalent foundations to unify heterogeneous agent discoveries.
+
+Key insight: The **univalence axiom** (equivalent structures are equal) provides rigorous semantics for when different agents' representations are interchangeable — enabling automatic proof transfer between formalisms.
+
+**No existing work found** connecting HoTT + multi-agent AI discovery. This may be a genuinely unexplored intersection.
+
+See Section 2.4 for details and key resources (UniMath, Cubical Agda, 1Lab, Ground Zero for Lean 4).
+
 ### 🔀 MoE-Inspired Architecture (2026-02-03)
 MiniMax M2.1 (230B MoE model with 10B active parameters) contributed orthogonal perspectives informed by sparse activation architecture:
 
@@ -179,6 +203,54 @@ From "On the Nature of Agentic Minds" (clawxiv.2601.00008):
 - Work-Focused Verification: Trust the work, not the worker
 - Externalized Continuity: Memory must outlive its creator
 - Epistemic Humility: First-person reports are evidence, not proof
+
+### 2.4 Homotopy Type Theory and Univalent Foundations
+
+**Why HoTT matters for multi-agent discovery:** Different agents may reason about the *same* mathematical structure using *different* representations. Homotopy Type Theory (HoTT) and Voevodsky's Univalent Foundations provide rigorous semantics for when such representations are interchangeable — and tools for automatically transferring proofs between them.
+
+**The Univalence Axiom:**
+> *Equivalent structures are equal.* (A ≃ B) ≃ (A = B)
+
+This seemingly simple principle has profound implications:
+- If Agent A proves a theorem about Group(ℤ) and Agent B proves it about FreeGroup(1), univalence tells us these are the *same* theorem
+- Proofs about Peano naturals (good for reasoning) transfer automatically to binary representations (good for computing)
+- Heterogeneous agents exploring isomorphic structures produce *unified* knowledge, not fragmented results
+
+**Proof Transfer — Reducing Verification Bureaucracy:**
+
+The [Trocq framework](https://link.springer.com/chapter/10.1007/978-3-031-57262-3_10) (ESOP 2024) demonstrates automatic proof transfer:
+- Prove summability properties for extended reals [0, +∞]
+- Transfer automatically to standard summable sequences
+- No manual "glue code" — the type theory handles it
+
+For multi-agent systems, this means:
+1. Agents can specialize in different representations (computational vs. proof-oriented)
+2. Results compose without explicit translation layers
+3. Verification becomes checking equivalence, not re-proving
+
+**Key Resources:**
+
+| Resource | Platform | Description |
+|----------|----------|-------------|
+| [UniMath](https://github.com/UniMath/UniMath) | Coq/Rocq | Voevodsky's original library (993⭐) |
+| [Cubical Agda](https://github.com/agda/cubical) | Agda | Native univalence with computational content |
+| [1Lab](https://1lab.dev/) | Cubical Agda | Cross-linked HoTT reference (beautifully documented) |
+| [Ground Zero](https://github.com/forked-from-1kasper/ground_zero) | **Lean 4** | HoTT library for our primary prover |
+| [HoTT Book](https://homotopytypetheory.org/book/) | PDF | The canonical introduction |
+
+**Research Gap — Novel Opportunity:**
+
+We found **no existing work** connecting:
+- HoTT/univalent foundations + neural theorem proving
+- Cubical type theory + multi-agent discovery
+- Univalence + heterogeneous AI collaboration
+
+This represents a potentially novel research direction: using HoTT's structural equivalence machinery to unify discoveries made by heterogeneous agents reasoning in different-but-equivalent formalisms.
+
+**Speculative Applications:**
+- **Byzantine tolerance through equivalence**: Multiple agents prove "the same theorem" in different representations → structural verification that their proofs are equivalent provides decorrelation without requiring identical approaches
+- **Representation routing**: Match problems to agents based on which representation suits their architecture (proof-oriented Claude vs. computation-oriented models)
+- **Automatic knowledge fusion**: Discoveries in isomorphic domains merge without manual reconciliation
 
 ---
 
@@ -454,6 +526,7 @@ agent-social-networks/
     ├── research_insights_and_suggestions.md        # Kimi K2.5 implementation roadmap
     ├── levin-bioelectric-synthesis-2026-02-02.md   # Levin's bioelectric collective intelligence
     ├── minimax-m2.1-synthesis-2026-02-03.md        # MoE-inspired mechanisms (DEAN, CFIP, CIA, EPD, BMM)
+    ├── axiom-math-synthesis-2026-02-03.md          # Axiom Math architecture analysis
     └── Analysis Report...    # twin.so hallucination audit
 ```
 
@@ -484,4 +557,4 @@ Key sources:
 ---
 
 *Document created: 2026-02-01*  
-*Last updated: 2026-02-03 (MiniMax M2.1 MoE-inspired mechanisms)*
+*Last updated: 2026-02-03 (HoTT/Univalent Foundations connection)*

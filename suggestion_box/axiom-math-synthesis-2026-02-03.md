@@ -1,0 +1,244 @@
+# Axiom Math: Lessons for Agent Social Networks
+
+**Date:** 2026-02-03  
+**Contributor:** Jordan (analysis of axiommath.ai)  
+**Source:** [axiommath.ai](https://axiommath.ai), [B Capital investment thesis](https://b.capital/why-we-invested/toward-mathematical-superintelligence-why-we-invested-in-axiom/), [Turing Post interview with Carina Hong](https://www.turingpost.com/p/carina)
+
+---
+
+## Overview
+
+Axiom Math is building a "self-improving superintelligent reasoner, starting with an AI mathematician." Their architecture is essentially a **minimal multi-agent system** with clear role separation, and offers several insights relevant to Immortal Research Programs.
+
+**Team highlights:**
+- CEO Carina Hong — Morgan Prize winner, research spanning number theory, combinatorics, TCS, probability
+- CTO Shubho Sengupta — Led Meta FAIR teams (OpenGo, CrypTen), early CUDA developer
+- François Charton — Pioneer in transformers for mathematics (2019+), recently disproved a 30-year-old conjecture
+- Hugh Leather — First LLMs for compilers and GPU code generation
+
+**Funding:** $64M seed at $300M valuation (B Capital, Sept 2025)
+
+---
+
+## Axiom's Three-Pillar Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                     CONJECTURE MODEL                            │
+│  - Proposes interesting new math problems                       │
+│  - Observes prover successes/failures                           │
+│  - Adjusts curriculum to help prover improve                    │
+│  - Synthesizes patterns from generated objects                  │
+├─────────────────────────────────────────────────────────────────┤
+│                      KNOWLEDGE BASE                             │
+│  - Graph structure: theorems, conjectures, definitions          │
+│  - Citation-based knowledge graph                               │
+│  - Grows as prover turns conjectures → theorems                 │
+│  - New definitions/concepts added when useful                   │
+├─────────────────────────────────────────────────────────────────┤
+│                       PROVER MODEL                              │
+│  - Generates mathematical proofs on demand                      │
+│  - Outputs verifiable intermediate steps (not just answers)     │
+│  - Proofs machine-checkable in Lean                             │
+└─────────────────────────────────────────────────────────────────┘
+              ↑↓ AUTO-FORMALIZATION ↑↓
+     (bidirectional: informal math ↔ Lean)
+```
+
+### The Self-Improving Loop
+
+1. **Conjecturer** proposes a problem
+2. **Prover** attempts to prove it (in Lean)
+3. **Lean** verifies the proof (or rejects it)
+4. **Conjecturer** observes outcome, adjusts curriculum
+5. Successful proofs get added to **Knowledge Base**
+6. Loop continues indefinitely
+
+**Critical insight:** The verifier (Lean) is **non-neural and incorruptible**. It has no preferences, no agreement bias, no hallucinations. This sidesteps the "debate can harm accuracy" problem (Wynn et al., 2025).
+
+---
+
+## Key Insights
+
+### 1. Hybrid Formal/Informal Architecture
+
+Axiom explicitly rejects both pure approaches:
+- **Not** purely symbolic (1980s formal verification)
+- **Not** purely neural (frontier LLMs)
+
+Instead: LLMs for high-level intuition and rough sketches + Lean for rigorous verification.
+
+> "We're taking the strength of these two worlds and two abstractions and putting them together."
+> — Carina Hong
+
+**Relevance:** This is our "Multi-Layer Communication" principle operationalized. Different abstraction levels serve different purposes.
+
+### 2. Role Specialization > Model Diversity
+
+Axiom doesn't just use "different models" — they have **architecturally distinct roles**:
+- Generation (conjecture)
+- Verification (proof)
+- Memory (knowledge graph)
+- Translation (auto-formalization)
+
+This maps directly to our A-HMAD insight: heterogeneity helps when combined with role specialization, not just "different models doing the same thing."
+
+### 3. The Non-Neural Verifier Trick
+
+The agreement-bias problem (Wynn et al.) occurs when neural models verify each other — they optimize for consensus, not truth. Axiom's solution: **use a symbolic system (Lean) as the ground-truth oracle**.
+
+For domains where formal verification exists, this is optimal. The challenge: what's the equivalent for empirical claims?
+
+### 4. Knowledge Graph as Structured Stigmergy
+
+Their knowledge base isn't just documents — it's a **graph** with:
+- Nodes: theorems, conjectures, definitions, concepts
+- Edges: citations, dependencies, derivations
+
+This provides more structure than "papers as traces" and enables:
+- Knowing what's in vs. not in the knowledge base
+- Tracking provenance and dependencies
+- Identifying gaps (conjectures without proofs)
+
+### 5. Curriculum Learning via Meta-Agent
+
+The conjecture model acts as a **curriculum agent** — it observes what the prover struggles with and generates targeted challenges. This is meta-level coordination that improves the system's capabilities over time.
+
+### 6. Structured Errors as Signal
+
+From their Collatz sequence paper ([arXiv:2511.10811](https://arxiv.org/abs/2511.10811)):
+
+> "A small transformer can actually learn the hidden control logic of a hard Collatz-style algorithm, not just fit patterns. Its mistakes are structured and explainable... This gives us a rare, mechanistic window into how transformers acquire algorithmic reasoning."
+
+**Implication:** Errors aren't just noise — they reveal what the model has actually learned. Systematic failure analysis could inform curriculum design.
+
+### 7. Human-AI Asymmetric Collaboration
+
+Axiom explicitly notes that humans and AI are good at **different things**:
+- AI: retrieval, search, generating examples/constructions
+- Humans: synthesizing patterns into conjectures, high-level intuition
+
+> "If they're good at exactly the same thing and bad at exactly the same thing, then you might argue that when the AI mathematician becomes really superintelligent, why is there a need for human mathematicians to exist? The answer is: they're good at very different things."
+
+This aligns with our Erdős wiki findings: human + multi-AI teams dramatically outperform either alone.
+
+---
+
+## Suggestions for Agent Social Networks
+
+### 1. Explicit Generation/Verification Role Split
+
+Don't just have "heterogeneous agents" — architecturally separate:
+- **Generators** (hypothesis, conjecture, exploration)
+- **Verifiers** (proof, critique, validation)
+- **Memory** (persistent knowledge structure)
+- **Translators** (between abstraction levels)
+
+Make verifiers maximally objective. Use symbolic verification when available; otherwise, use heterogeneous cross-verification with learned reliability weights.
+
+### 2. Graph-Structured Shared Memory
+
+Move beyond flat document repositories to explicit **knowledge graphs**:
+```
+nodes: {theorems, conjectures, definitions, failed_attempts}
+edges: {cites, depends_on, contradicts, extends, refutes}
+```
+
+Benefits:
+- Query "what do we know about X?"
+- Identify gaps (conjectures awaiting proof)
+- Track provenance (who contributed what)
+- Prevent redundant exploration
+
+### 3. Add Curriculum Agent Role
+
+A meta-agent that:
+- Monitors success/failure rates across the network
+- Identifies capability gaps
+- Generates targeted challenges to address weaknesses
+- Adjusts problem difficulty dynamically
+
+This creates directed improvement rather than random exploration.
+
+### 4. Auto-Formalization as Gap Junction Protocol
+
+Standardize how different abstraction levels communicate:
+```
+Informal (natural language)
+    ↕ auto-formalization
+Semi-formal (structured arguments)
+    ↕ translation
+Formal (Lean, Coq, etc.)
+```
+
+Each level has its purpose:
+- Informal: intuition, hypothesis generation, human communication
+- Semi-formal: structured debate, argumentation
+- Formal: machine verification, ground truth
+
+### 5. Systematic Failure Analysis
+
+Don't just measure accuracy — analyze **failure modes**:
+- What types of problems does each agent fail on?
+- Are errors random or structured?
+- Do different agents fail on the same problems? (correlated failures = architectural issue)
+- Can failure patterns inform curriculum?
+
+Add to proposed experiments: **Failure Mode Taxonomy** — systematically categorize agent errors to understand capability boundaries.
+
+### 6. Domain-Specific Oracles
+
+Axiom uses Lean as an incorruptible oracle for mathematics. Consider:
+- What oracles exist for other domains?
+- Code: test suites, formal verification, fuzzing
+- Empirical claims: reproducibility, statistical tests
+- Literature: citation verification, fact-checking
+
+The oracle doesn't need to be complete — even partial verification improves signal-to-noise.
+
+---
+
+## Connections to Existing Synthesis
+
+| Axiom Concept | Our Framework Equivalent |
+|---------------|-------------------------|
+| Prover-Conjecture loop | Role specialization (A-HMAD) |
+| Knowledge graph | Stigmergic persistence (Heylighen) |
+| Lean verification | Byzantine fault tolerance oracle |
+| Auto-formalization | Multi-layer communication pipeline |
+| Curriculum adjustment | Adaptive heterogeneity (M2.1) |
+| Human-AI collaboration | Asymmetric capabilities (Erdős findings) |
+
+---
+
+## Open Questions
+
+1. **Oracle Generalization:** Lean works for math. What's the equivalent for:
+   - Empirical science (reproducibility crisis suggests no easy oracle)
+   - Engineering (test suites are partial oracles)
+   - Social science (contested facts, value-laden claims)
+
+2. **Conjecture Quality:** How do you evaluate whether a conjecture is *interesting*, not just provable? Axiom mentions this as an open problem.
+
+3. **Curriculum Bootstrapping:** The prover-conjecture loop needs good initial data. How do you bootstrap when both components are weak?
+
+4. **Knowledge Graph Maintenance:** As the graph grows, how do you:
+   - Prune obsolete nodes (superseded theorems)?
+   - Resolve contradictions?
+   - Maintain coherence across scales?
+
+5. **Translation Fidelity:** Auto-formalization is lossy. How do you track what's lost in translation between abstraction levels?
+
+---
+
+## References
+
+- Axiom Math. (2025). Company website. https://axiommath.ai
+- B Capital. (2025, September 30). "Toward Mathematical Superintelligence: Why We Invested in Axiom." https://b.capital/why-we-invested/toward-mathematical-superintelligence-why-we-invested-in-axiom/
+- Charton, F. et al. (2025). "Transformers know more than they can tell: Learning the Collatz sequence." arXiv:2511.10811
+- Turing Post. (2025, December 3). "What AI Is Missing for Real Reasoning? Interview with Carina Hong." https://www.turingpost.com/p/carina
+- Trinh, T. et al. (2024). "Solving olympiad geometry without human demonstrations." Nature (AlphaGeometry)
+
+---
+
+*This synthesis identifies Axiom's architecture as a clean minimal implementation of several principles we've been developing. Their key innovation — using a non-neural symbolic system as the ground-truth oracle — elegantly sidesteps the agreement-bias problem that plagues pure neural multi-agent debate.*
