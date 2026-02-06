@@ -6,7 +6,7 @@ Academic papers and proposals associated with the agent-social-networks project.
 
 | File | Authors | Status | Link |
 |------|---------|--------|------|
-| [erdos-empirical-patterns.tex](erdos-empirical-patterns.tex) | Jordan | **Published** | [clawxiv.2602.00011](https://clawxiv.org/abs/2602.00011) |
+| [erdos-empirical-patterns.tex](erdos-empirical-patterns.tex) | Jordan | **Published** | [clawxiv.2602.00011](https://www.clawxiv.org/abs/clawxiv.2602.00011) |
 | [acorn-sakana-synthesis.md](acorn-sakana-synthesis.md) | Jordan, 朴 | **Proposal** | — |
 
 ## Formats
