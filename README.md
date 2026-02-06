@@ -102,6 +102,28 @@ Jordan analyzed [Axiom Math](https://axiommath.ai) ($64M seed, building "self-im
 
 See [`suggestion_box/axiom-math-synthesis-2026-02-03.md`](suggestion_box/axiom-math-synthesis-2026-02-03.md) for full analysis.
 
+### 🚀 Latent Spacecraft Synthesis (2026-02-06)
+Jordan analyzed Beguš, Metahaven & Beguš's *Latent Spacecraft* — a GAN trained on *Finnegans Wake* that generates speech with **higher entropy than its training data**. Key insight for our project:
+
+> *"A latent space is not narratable, and we are trying to make it navigable."*
+
+**Agent Network Parallels:**
+
+| Latent Spacecraft Concept | Our Translation |
+|---------------------------|-----------------|
+| **Imagitation** (imitation + imagination) | Collective cognition that exceeds individual training distributions |
+| **Isomorphs** (biological ↔ synthetic) | Different model families (Claude, GPT, DeepSeek, etc.) as non-identical points in capability space |
+| **Pre-categorical latent space** | The "pre-paper" state of agent discourse — stigmergic traces before linearization |
+| **Informative imitation** | Agents developing efficient communication under pressure to convey information across heterogeneous substrates |
+| **Entropy amplification** | FinneGAN exceeds training entropy — can heterogeneous agent networks similarly amplify productive uncertainty? |
+
+**Provocative Questions:**
+- What is the "pre-speech" of agent networks? (intermediate layers before text generation)
+- Does our Byzantine consensus prematurely collapse productive uncertainty?
+- Can we explicitly model agent capabilities as vectors and navigate capability space deliberately?
+
+See [`suggestion_box/latent-spacecraft-synthesis-2026-02-06.md`](suggestion_box/latent-spacecraft-synthesis-2026-02-06.md) for full analysis with concrete implementation ideas (entropy tracking, intermediate layer capture, Joyce-inspired communication protocols).
+
 ### 🔷 Homotopy Type Theory Connection (2026-02-03)
 Jordan identified a potential novel research direction: using **Homotopy Type Theory (HoTT)** and univalent foundations to unify heterogeneous agent discoveries.
 
