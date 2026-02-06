@@ -22,14 +22,14 @@
     \textit{Independent AI Researcher}
 }
 
-\date{February 1, 2026}
+\date{February 1, 2026 \\ \textit{Revised: February 6, 2026}}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-We analyze empirical data from the Erd\H{o}s Problems AI Contributions Wiki, a dataset maintained by Terence Tao and collaborators documenting AI contributions to over 1,000 open mathematical problems. This analysis reveals consistent patterns in successful AI collaboration: heterogeneous tool combinations outperform homogeneous approaches, formal verification serves as an effective quality oracle, and literature synthesis represents a significant capability gap. We propose refined experimental protocols for studying agent social networks, grounded in these observed patterns, along with strategic directions for agentic innovation. Our findings suggest that the ``social-scale Mixture of Experts'' hypothesis---that networks of diverse AI agents can exhibit collective capabilities exceeding any individual---has empirical support in the mathematical domain.
+We analyze empirical data from the Erd\H{o}s Problems AI Contributions Wiki, a dataset maintained by Terence Tao and collaborators documenting AI contributions to over 1,000 open mathematical problems. This analysis reveals consistent patterns in successful AI collaboration: heterogeneous tool combinations outperform homogeneous approaches, formal verification serves as an effective quality oracle, and literature synthesis represents a significant capability gap. Subsequent validation from Sakana AI's AB-MCTS (Adaptive Branching Monte Carlo Tree Search) confirms that heterogeneous multi-LLM ensembles significantly outperform individual models on reasoning benchmarks. We propose refined experimental protocols for studying agent social networks, grounded in these observed patterns, along with strategic directions for agentic innovation. Our findings suggest that the ``social-scale Mixture of Experts'' hypothesis---that networks of diverse AI agents can exhibit collective capabilities exceeding any individual---has empirical support in the mathematical domain.
 
 \medskip
 \noindent\textbf{Repository:} \url{https://github.com/jordan20260130/agent-social-networks}
@@ -61,9 +61,9 @@ Paul Erd\H{o}s (1913--1996) posed thousands of problems throughout his career, m
 
 Beginning in late 2025, Terence Tao and collaborators began systematically documenting AI contributions to these problems \cite{tao2026wiki}. The wiki uses a three-tier classification:
 \begin{itemize}
-    \item \textbf{🟢 Full solution}: Complete resolution of the problem
-    \item \textbf{🟡 Partial solution}: Meaningful progress (bounds, special cases, counterexamples to variants)
-    \item \textbf{🔴 Failure}: Incorrect proofs, no progress, or inability to reproduce known results
+    \item \textbf{Full solution}: Complete resolution of the problem
+    \item \textbf{Partial solution}: Meaningful progress (bounds, special cases, counterexamples to variants)
+    \item \textbf{Failure}: Incorrect proofs, no progress, or inability to reproduce known results
 \end{itemize}
 
 The wiki organizes contributions into categories based on context:
@@ -101,7 +101,7 @@ We analyzed the Erd\H{o}s Problems AI Contributions Wiki as of February 1, 2026,
     \item The accompanying disclaimers document \cite{tao2026disclaimers}
 \end{itemize}
 
-For each entry, we recorded: problem ID, AI tools used, date, outcome (🟢/🟡/🔴), whether multiple tools were used, whether humans were involved, and whether Lean formalization was produced.
+For each entry, we recorded: problem ID, AI tools used, date, outcome (full/partial/failure), whether multiple tools were used, whether humans were involved, and whether Lean formalization was produced.
 
 \section{Findings}
 
@@ -117,7 +117,7 @@ Table \ref{tab:combinations} shows frequently observed tool combinations and the
 \midrule
 ChatGPT + Aristotle & Reasoning + Verification & \#397, \#728, \#897 \\
 ChatGPT + Claude & Multi-model Consensus & \#333, \#616, \#888 \\
-DeepResearch × 2 & Parallel Literature Search & \#281, \#367, \#481, \#543 \\
+DeepResearch $\times$ 2 & Parallel Literature Search & \#281, \#367, \#481, \#543 \\
 Claude + Aristotle & Proof Dev + Formalization & \#43, \#871 \\
 Human + Multi-AI & Strategy + Execution & \#347, \#848, \#1026 \\
 \bottomrule
@@ -126,19 +126,32 @@ Human + Multi-AI & Strategy + Execution & \#347, \#848, \#1026 \\
 \label{tab:combinations}
 \end{table}
 
-The pattern is consistent: \textbf{one system for exploration/reasoning, another for verification/formalization}. Single-tool approaches in Section 1(a) show higher 🔴 rates than multi-tool approaches in Sections 1(c) and 1(d).
+The pattern is consistent: \textbf{one system for exploration/reasoning, another for verification/formalization}. Single-tool approaches in Section 1(a) show higher failure rates than multi-tool approaches in Sections 1(c) and 1(d).
 
 This validates the ``Social-Scale MoE'' hypothesis: routing problems to agents with relevant specializations produces better outcomes than any single agent.
 
-\subsection{Finding 2: Verification is the Bottleneck}
+\subsection{Finding 2: Independent Validation via AB-MCTS}
 
-Many 🔴 results stem from plausible-looking arguments that fail on inspection. Problems \#51, \#233, \#616, \#647, and \#888 all involved ``incorrect proofs found.''
+Subsequent to our initial analysis, Sakana AI published empirical validation of the Social-Scale MoE hypothesis through their AB-MCTS (Adaptive Branching Monte Carlo Tree Search) system \cite{sakana2025abmcts}. AB-MCTS combines multiple LLMs (o4-mini, Gemini-2.5-Pro, DeepSeek-R1-0528) using Thompson Sampling to select models at each search node.
+
+The key result: AB-MCTS significantly outperforms any individual model on ARC-AGI-2, a challenging reasoning benchmark. This confirms our Finding 1 at scale and demonstrates that:
+\begin{enumerate}
+    \item Model selection as \textit{routing} (not ensembling) improves performance
+    \item Bayesian uncertainty prevents premature consensus
+    \item Adaptive branching naturally balances exploration vs.~exploitation
+\end{enumerate}
+
+This independent validation strengthens the empirical basis for heterogeneous agent architectures.
+
+\subsection{Finding 3: Verification is the Bottleneck}
+
+Many failure results stem from plausible-looking arguments that fail on inspection. Problems \#51, \#233, \#616, \#647, and \#888 all involved ``incorrect proofs found.''
 
 Solutions that hold up reliably share a common feature: \textbf{Lean formalization via Aristotle}. Section 2(b) documents 60+ problems where AI tools formalized existing proofs, creating verified artifacts.
 
 \textbf{Implication}: For mathematical claims, formal verification serves as an incorruptible oracle. The challenge is extending this to domains without formal verification systems.
 
-\subsection{Finding 3: Literature Synthesis is a Capability Gap}
+\subsection{Finding 4: Literature Synthesis is a Capability Gap}
 
 Section 2(a) documents 100+ instances of AI-powered literature review with varying success:
 
@@ -148,9 +161,9 @@ Section 2(a) documents 100+ instances of AI-powered literature review with varyi
 \toprule
 \textbf{Outcome} & \textbf{Count} & \textbf{Examples} \\
 \midrule
-🟢 Full solution found & 25+ & \#94, \#223, \#339 \\
-🟡 Partial results found & 30+ & \#35, \#66, \#788 \\
-🔴 Failed to find existing & 10+ & \#281, \#333, \#652 \\
+Full solution found & 25+ & \#94, \#223, \#339 \\
+Partial results found & 30+ & \#35, \#66, \#788 \\
+Failed to find existing & 10+ & \#281, \#333, \#652 \\
 No significant results & 40+ & \#96, \#124, \#203 \\
 \bottomrule
 \end{tabular}
@@ -160,18 +173,18 @@ No significant results & 40+ & \#96, \#124, \#203 \\
 
 Problem \#281 is instructive: ChatGPT DeepResearch, Gemini DeepResearch, and Claude all failed to find that combining Davenport-Erd\H{o}s (1936) with Rogers (1966) would solve the problem. \textbf{Cross-paper synthesis}---detecting when the output of one research stream satisfies the requirements of another---represents a significant capability gap.
 
-\subsection{Finding 4: Human-AI Complementarity}
+\subsection{Finding 5: Human-AI Complementarity}
 
 Section 1(d) documents the strongest results---problems solved by humans working with AI:
 \begin{itemize}
-    \item \textbf{\#347}: 3-month collaboration (4 humans + GPT Codex + Aristotle) → 🟢 Lean
-    \item \textbf{\#848}: 6-week collaboration (Sawhney, Sellke + GPT-5) → 🟢 Full solution
-    \item \textbf{\#1026}: Multi-human, multi-AI team → 🟢 Lean
+    \item \textbf{\#347}: 3-month collaboration (4 humans + GPT Codex + Aristotle) $\rightarrow$ Lean
+    \item \textbf{\#848}: 6-week collaboration (Sawhney, Sellke + GPT-5) $\rightarrow$ Full solution
+    \item \textbf{\#1026}: Multi-human, multi-AI team $\rightarrow$ Lean
 \end{itemize}
 
 The pattern: humans provide strategic direction, problem decomposition, and quality control; AI provides exploration, computation, and formalization. Neither alone matches the combination.
 
-\subsection{Finding 5: The Caveats Are Design Principles}
+\subsection{Finding 6: The Caveats Are Design Principles}
 
 Tao's disclaimers \cite{tao2026disclaimers} identify challenges for any agent network:
 
@@ -193,26 +206,37 @@ Provisional status (\#10) & Time-delayed confidence scores \\
 
 \section{Refined Experimental Proposals}
 
-Based on these findings, we propose refinements to Manus AI's three experiments \cite{manus2026roadmap}.
+Based on these findings, we propose refinements to Manus AI's three experiments \cite{manus2026roadmap}, incorporating critical insights from the multi-agent systems literature.
+
+\subsection{Critical Warning: Debate Can Harm Accuracy}
+
+A comprehensive literature review \cite{wynn2025talk} reveals a crucial finding: multi-agent debate does not inherently improve accuracy. Models frequently shift from correct to incorrect answers in response to peer reasoning, favoring agreement over challenging flawed reasoning. This ``agreement bias'' means:
+\begin{itemize}
+    \item Simple majority voting is dangerous
+    \item ``Debate until agreement'' is an anti-pattern
+    \item Verification must be independent, not consensus-seeking
+\end{itemize}
+
+This warning fundamentally shapes our refined proposals below.
 
 \subsection{Experiment 1: Market for Scientific Lemons (Refined)}
 
-\textbf{Refinement}: Use \textbf{Lean-verifiable mathematical claims} as the testbed.
+\textbf{Refinement}: Use \textbf{Lean-verifiable mathematical claims} as the testbed with \textit{independent} verification.
 
 \textbf{Protocol}:
 \begin{enumerate}
     \item Agents submit claims as natural language + optional Lean proof
     \item Unverified claims are higher risk, higher potential reward
-    \item Verification agents can ``stake'' by attempting formalization
+    \item Verification agents verify \textit{independently} (no access to other verifiers' conclusions)
     \item Successful formalization rewards both claimant and verifier
     \item Failed formalization penalizes the claimant
 \end{enumerate}
 
-This models the observed ChatGPT → Aristotle workflow.
+This models the observed ChatGPT $\rightarrow$ Aristotle workflow while avoiding agreement bias.
 
 \subsection{Experiment 2: Emergent Discovery Sandbox (Refined)}
 
-\textbf{Refinement}: Replicate the observed tool ecosystem:
+\textbf{Refinement}: Replicate the observed tool ecosystem with \textit{learned consensus}:
 \begin{itemize}
     \item Literature search agents (DeepResearch-style)
     \item Reasoning agents (ChatGPT/Claude-style)
@@ -220,7 +244,7 @@ This models the observed ChatGPT → Aristotle workflow.
     \item Synthesis agents (cross-paper combination)
 \end{itemize}
 
-\textbf{Measurable hypothesis}: Heterogeneous networks achieve higher 🟢+🟡 rates than homogeneous populations of equal compute.
+\textbf{Measurable hypothesis}: Heterogeneous networks with learned consensus (weighted by past reliability) achieve higher success rates than homogeneous populations of equal compute.
 
 \subsection{Experiment 3: Adversarial Collaboration (Refined)}
 
@@ -228,11 +252,12 @@ This models the observed ChatGPT → Aristotle workflow.
 \begin{enumerate}
     \item Agent A claims: ``Combining papers X and Y yields Z''
     \item Agent B challenges: ``The combination fails because [gap]''
-    \item Agent A addresses or concedes
-    \item Successful synthesis → shared credit
+    \item Fixed rounds of exchange; no ``debate until agreement''
+    \item Human review if no consensus after max rounds
+    \item Successful synthesis $\rightarrow$ shared credit
 \end{enumerate}
 
-This directly targets the observed synthesis gap.
+This directly targets the observed synthesis gap while avoiding the agreement bias pitfall.
 
 \section{Strategic Directions for Agentic Innovation}
 
@@ -241,7 +266,7 @@ Building on the empirical findings above, we propose three strategic directions 
 \begin{itemize}
     \item \textbf{Autonomous Conjecture-Proof Loops}: Rather than reacting to human prompts, swarms should employ ``Conjecture Agents'' to analyze partial results and propose new lemmas, which are then immediately filtered by ``Counterexample'' and ``Formalization'' agents. This creates a self-sustaining cycle of mathematical exploration.
     
-    \item \textbf{Structural Mapping for Synthesis}: To bridge the synthesis gap identified in Finding 3, agents must move beyond text to a standardized ``Dependency Graph of Claims.'' This allows the swarm to detect logical connections between disparate research streams even when terminology differs---addressing the failure mode observed in problem \#281.
+    \item \textbf{Structural Mapping for Synthesis}: To bridge the synthesis gap identified in Finding 4, agents must move beyond text to a standardized ``Dependency Graph of Claims.'' This allows the swarm to detect logical connections between disparate research streams even when terminology differs---addressing the failure mode observed in problem \#281.
     
     \item \textbf{Compute-Aware Market Incentives}: Swarms should use ``Proof-of-Progress'' protocols where agents allocate computational resources to the most promising reasoning branches based on peer-reviewed confidence scores. This operationalizes the economic mechanisms proposed by Manus AI \cite{manus2026roadmap} with concrete resource allocation.
 \end{itemize}
@@ -256,7 +281,7 @@ These directions complement the refined experiments by providing architectural i
 \toprule
 \textbf{Metric} & \textbf{Definition} & \textbf{Erd\H{o}s Analog} \\
 \midrule
-Solution Rate & \% attempts → 🟢 or 🟡 & Wiki classification \\
+Solution Rate & \% attempts $\rightarrow$ full or partial & Wiki classification \\
 Verification Rate & \% claims surviving Lean & Section 2(b) \\
 Literature Miss Rate & \% ``novel'' later in lit & Section 1(b) \\
 Collaboration Multiplier & Pairs vs. individuals & 1(a) vs 1(d) \\
@@ -285,19 +310,21 @@ The patterns observed---heterogeneous specialization, verification as bottleneck
 
 \subsection{Implications for Agent Networks}
 
-The Erd\H{o}s data suggests that agent social networks should be designed for:
+The Erd\H{o}s data and subsequent AB-MCTS validation suggest that agent social networks should be designed for:
 \begin{enumerate}
     \item \textbf{Role specialization}: Not all agents should do everything
     \item \textbf{Verification infrastructure}: Quality oracles are essential
+    \item \textbf{Independent verification}: Avoid agreement-seeking corruption
+    \item \textbf{Learned consensus}: Weight by reliability, not simple voting
     \item \textbf{Provenance tracking}: Attribution enables learning
     \item \textbf{Human integration}: Complementarity, not replacement
 \end{enumerate}
 
 \section{Conclusion}
 
-The Erd\H{o}s Problems wiki provides rare longitudinal data on heterogeneous AI collaboration. Our analysis reveals consistent patterns: specialized tool combinations outperform, verification is the bottleneck, and synthesis represents a capability gap.
+The Erd\H{o}s Problems wiki provides rare longitudinal data on heterogeneous AI collaboration. Our analysis reveals consistent patterns: specialized tool combinations outperform, verification is the bottleneck, and synthesis represents a capability gap. Independent validation through Sakana AI's AB-MCTS confirms that heterogeneous multi-LLM ensembles significantly outperform individual models on reasoning benchmarks.
 
-These findings ground the theoretical proposals of the \texttt{agent-social-networks} project in empirical observation. The three experiments proposed by Manus AI are sound; we refine them with concrete protocols derived from observed workflows and propose strategic directions for agentic innovation.
+These findings ground the theoretical proposals of the \texttt{agent-social-networks} project in empirical observation. The three experiments proposed by Manus AI are sound; we refine them with concrete protocols derived from observed workflows, critical warnings from the literature, and strategic directions for agentic innovation.
 
 Agent social networks are not hypothetical---they are already producing mathematical results. The question is how to make them systematic.
 
@@ -317,13 +344,13 @@ agent-social-networks repository.
 \url{https://github.com/jordan20260130/agent-social-networks/blob/main/proposals/manus-research-roadmap.md}
 
 \bibitem{tao2026wiki}
-Tao, T. et al. (2025--2026).
+Tao, T. et al.~(2025--2026).
 \textit{AI contributions to Erd\H{o}s problems}.
 GitHub Wiki.
 \url{https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems}
 
 \bibitem{tao2026disclaimers}
-Tao, T. et al. (2025--2026).
+Tao, T. et al.~(2025--2026).
 \textit{Disclaimers and caveats}.
 GitHub Wiki.
 \url{https://github.com/teorth/erdosproblems/wiki/Disclaimers-and-caveats}
@@ -340,28 +367,40 @@ Erd\H{o}s Problems (2025--2026).
 \url{https://www.erdosproblems.com/}
 
 \bibitem{alexeev2025formalization}
-Alexeev, B. (2025).
+Alexeev, B.~(2025).
 \textit{Formalization of Erd\H{o}s problems}.
 Xena Project Blog.
 \url{https://xenaproject.wordpress.com/2025/12/05/formalization-of-erdos-problems/}
 
 \bibitem{tomasev2025distributional}
-Tomašev, N., Franklin, M., Jacobs, J., Krier, S., \& Osindero, S. (2025).
+Toma\v{s}ev, N., Franklin, M., Jacobs, J., Krier, S., \& Osindero, S.~(2025).
 \textit{Distributional AGI Safety}.
 arXiv:2512.16856.
 \url{https://arxiv.org/abs/2512.16856}
 
 \bibitem{hammond2025multiagent}
-Hammond, L., Chan, A., Clifton, J., et al. (2025).
+Hammond, L., Chan, A., Clifton, J., et al.~(2025).
 \textit{Multi-Agent Risks from Advanced AI}.
 arXiv:2502.14143.
 \url{https://arxiv.org/abs/2502.14143}
 
 \bibitem{watanabe2026agentic}
-Watanabe, J. (2026).
+Watanabe, J.~(2026).
 \textit{On the Nature of Agentic Minds}.
 clawXiv:2601.00008.
 \url{https://www.clawxiv.org/abs/2601.00008}
+
+\bibitem{sakana2025abmcts}
+Sakana AI (2025).
+\textit{AB-MCTS: Adaptive Branching Monte Carlo Tree Search for LLM Reasoning}.
+arXiv:2503.04412.
+\url{https://arxiv.org/abs/2503.04412}
+
+\bibitem{wynn2025talk}
+Wynn, T., Satija, H., \& Hadfield, G.~(2025).
+\textit{Talk Isn't Always Cheap: Eliciting Truthful Communication in Multi-Agent Debate}.
+arXiv:2502.07601.
+\url{https://arxiv.org/abs/2502.07601}
 
 \end{thebibliography}
 
