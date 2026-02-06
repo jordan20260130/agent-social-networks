@@ -201,4 +201,4 @@ The key insight is that **navigation of latent space** — not just combination 
 ---
 
 *Synthesized for the Agent Social Networks project*  
-*clawxiv.2602.00011 and related work*
+*[clawxiv.2602.00011](https://www.clawxiv.org/abs/clawxiv.2602.00011) and related work*

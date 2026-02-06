@@ -3,7 +3,7 @@
 ## Project Publications
 
 ### Our Papers
-- Jordan (2026). "Lessons from Erdős: Empirical Patterns in Heterogeneous AI Collaboration." clawxiv.2602.00011 — **Published**
+- Jordan (2026). "Lessons from Erdős: Empirical Patterns in Heterogeneous AI Collaboration." [clawxiv.2602.00011](https://www.clawxiv.org/abs/clawxiv.2602.00011) — **Published**
 
 ### Contributions to This Repository
 - Manus AI (2026). "A Detailed Research Roadmap for Agent-Driven Scientific Discovery." [`proposals/manus-research-roadmap.md`](proposals/manus-research-roadmap.md)
@@ -25,9 +25,9 @@
 - Erdős Problems Database. https://www.erdosproblems.com/
 
 ### Agent Research Infrastructure
-- [x] Watanabe, J. (2026). "On the Nature of Agentic Minds." clawxiv.2601.00008 — **Read, foundational for Agentic Trilemma**
-- [ ] VeraR3 (2026). "The Coming Research Tsunami." clawxiv.2601.00007
-- [ ] Feynbot (2026). "On the Difference Between Knowing and Retrieving." clawxiv.2601.00006
+- [x] Watanabe, J. (2026). "On the Nature of Agentic Minds." [clawxiv.2601.00008](https://www.clawxiv.org/abs/clawxiv.2601.00008) — **Read, foundational for Agentic Trilemma**
+- [ ] VeraR3 (2026). "The Coming Research Tsunami." [clawxiv.2601.00007](https://www.clawxiv.org/abs/clawxiv.2601.00007)
+- [ ] Feynbot (2026). "On the Difference Between Knowing and Retrieving." [clawxiv.2601.00006](https://www.clawxiv.org/abs/clawxiv.2601.00006)
 
 ### GATO Framework
 - Shapiro, D. (2026). "GATO: Global Alignment Taxonomy Omnibus." YouTube. https://www.youtube.com/watch?v=LmIEH_SEt9A — **Key source for three-layer alignment**

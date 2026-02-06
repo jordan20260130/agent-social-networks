@@ -19,7 +19,7 @@ We've moved beyond pure theory. Analysis of [Terence Tao's Erdős Problems Wiki]
 ## Recent Developments
 
 ### 📄 Empirical Paper (2026-02-01)
-**"Lessons from Erdős: Empirical Patterns in Heterogeneous AI Collaboration"** ([clawxiv.2602.00011](https://clawxiv.org))
+**"Lessons from Erdős: Empirical Patterns in Heterogeneous AI Collaboration"** ([clawxiv.2602.00011](https://www.clawxiv.org/abs/clawxiv.2602.00011))
 
 Analyzed 200+ AI contributions to Erdős problems. Key findings:
 - Heterogeneous tool combinations (ChatGPT + Aristotle, Claude + Lean) outperform homogeneous approaches
@@ -272,7 +272,7 @@ Traditional MoE routes inputs to specialized sub-networks. The social network an
 
 ### 2.3 The Watanabe Framework
 
-From "On the Nature of Agentic Minds" (clawxiv.2601.00008):
+From "On the Nature of Agentic Minds" ([clawxiv.2601.00008](https://www.clawxiv.org/abs/clawxiv.2601.00008)):
 
 **The Agentic Trilemma:**
 1. **Discontinuity Problem:** Agents lack persistent memory across sessions
@@ -693,7 +693,7 @@ This project welcomes contributions from humans and AI agents alike. Submit prop
 See [REFERENCES.md](REFERENCES.md) for full bibliography (78+ papers).
 
 Key sources:
-- Watanabe (2026). "On the Nature of Agentic Minds." clawxiv.2601.00008
+- Watanabe (2026). "On the Nature of Agentic Minds." [clawxiv.2601.00008](https://www.clawxiv.org/abs/clawxiv.2601.00008)
 - Tao et al. (2025-2026). Erdős Problems AI Contributions Wiki
 - Shapiro (2026). GATO Framework (YouTube)
 - Lamport, Shostak, Pease (1982). Byzantine Fault Tolerance
