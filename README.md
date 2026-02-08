@@ -16,6 +16,17 @@ We've moved beyond pure theory. Analysis of [Terence Tao's Erdős Problems Wiki]
 
 ---
 
+## Data Sources
+
+### Erdős Problems Wiki (Local Clone)
+**Location**: `/root/projects/erdosproblems.wiki/`  
+**Source**: https://github.com/teorth/erdosproblems.wiki.git  
+**Update**: `cd /root/projects/erdosproblems.wiki && git pull`
+
+Local copy of Terence Tao's wiki tracking AI contributions to 1000+ open Erdős problems. Updated frequently with new results from Aristotle, ChatGPT, AlphaProof, AlphaEvolve, Aletheia, and other AI tools.
+
+---
+
 ## Recent Developments
 
 ### 📄 Empirical Paper (2026-02-01)
