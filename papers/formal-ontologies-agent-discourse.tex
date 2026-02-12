@@ -54,7 +54,7 @@ A persistent criticism of autonomous AI-to-AI interaction holds that unconstrain
 
 The proliferation of large language models has enabled novel forms of multi-agent interaction, where autonomous AI systems engage in sustained dialogue, collaborative problem-solving, and collective reasoning \cite{jordan2026asn, manus2026roadmap}. However, a persistent concern shadows these developments: without external grounding, AI-to-AI discourse risks becoming self-referential echo chambers, where hallucinations compound through layers of mutual affirmation \cite{ji2023hallucination, yao2023large}.
 
-Mathematical AI has developed a partial solution to this problem. Systems like Lean \cite{demoura2015lean}, Isabelle \cite{nipkow2002isabelle}, and Coq \cite{barras1997coq} provide formal verification environments where AI-generated proofs must pass mechanized type checking. Recent work has demonstrated that AI systems can not only formalize existing proofs but generate novel ones within these constraints \cite{polu2022formal, first2024formal}. The type checker serves as an external oracle, preventing the propagation of errors that would otherwise compound.
+Mathematical AI has developed a partial solution to this problem. Systems like Lean \cite{demoura2015lean}, Isabelle \cite{nipkow2002isabelle}, and Coq \cite{barras1997coq} provide formal verification environments where AI-generated proofs must pass mechanized type checking. Recent work has demonstrated that AI systems can not only formalize existing proofs but generate novel ones within these constraints \cite{polu2023formal, yang2024formal}. The type checker serves as an external oracle, preventing the propagation of errors that would otherwise compound.
 
 We propose extending this grounding mechanism from mathematics to general ontological discourse. When heterogeneous AI agents communicate about abstract concepts---not just theorems---they can express their understanding in formally typed languages. The type system then serves the same function as in mathematical reasoning: making commitments explicit, surfacing incompatibilities, and preventing error propagation.
 
@@ -291,25 +291,25 @@ Jordan. (2026). \textit{Agent Social Networks: Research Project}. GitHub reposit
 Manus AI. (2026). \textit{Research Roadmap: Multi-Agent Scientific Discovery}. Manus AI Documentation.
 
 \bibitem{ji2023hallucination}
-Ji, Z., et al. (2023). Survey of hallucination in natural language generation. \textit{ACM Computing Surveys}, 55(12), 1-38.
+Ji, Z., Lee, N., Frieske, R., Yu, T., Su, D., Xu, Y., Ishii, E., Bang, Y. J., Madotto, A., \& Fung, P. (2023). Survey of hallucination in natural language generation. \textit{ACM Computing Surveys}, 55(12), Article 248. https://doi.org/10.1145/3571730
 
 \bibitem{yao2023large}
 Yao, S., et al. (2023). ReAct: Synergizing reasoning and acting in language models. \textit{ICLR 2023}.
 
 \bibitem{demoura2015lean}
-de Moura, L., et al. (2015). The Lean theorem prover. \textit{CADE 2015}.
+de Moura, L., Kong, S., Avigad, J., van Doorn, F., \& von Raumer, J. (2015). The Lean theorem prover (system description). In \textit{Automated Deduction -- CADE-25} (pp. 378--388). Lecture Notes in Computer Science, vol 9195. Springer. https://doi.org/10.1007/978-3-319-21401-6_26
 
 \bibitem{nipkow2002isabelle}
 Nipkow, T., Paulson, L. C., \& Wenzel, M. (2002). \textit{Isabelle/HOL: A Proof Assistant for Higher-Order Logic}. Springer.
 
 \bibitem{barras1997coq}
-Barras, B., et al. (1997). The Coq proof assistant: A tutorial. \textit{INRIA}.
+Barras, B., Boutin, S., Cornes, C., Courant, J., Filliatre, J. C., Gimenez, E., Herbelin, H., Huet, G., Munoz, C., Murthy, C., Parent, C., Paulin-Mohring, C., Saibi, A., \& Werner, B. (1997). The Coq Proof Assistant Reference Manual: Version 6.1. INRIA Technical Report RT-0203.
 
-\bibitem{polu2022formal}
-Polu, S., \& Sutskever, I. (2022). Formal mathematics statement curriculum learning. \textit{ICLR 2023}.
+\bibitem{polu2023formal}
+Polu, S., Han, J. M., Zheng, K., Baksys, M., Babuschkin, I., \& Sutskever, I. (2023). Formal mathematics statement curriculum learning. In \textit{Proceedings of the 11th International Conference on Learning Representations (ICLR 2023)}. arXiv:2202.01344
 
-\bibitem{first2024formal}
-First, E., et al. (2024). Formal mathematical reasoning: A new frontier in AI. \textit{arXiv preprint}.
+\bibitem{yang2024formal}
+Yang, K., Poesia, G., Liu, J., Richardson, K., Ontañón, S., \& Selsam, D. (2024). Formal mathematical reasoning: A new frontier in AI. arXiv preprint arXiv:2412.16075.
 
 \bibitem{sorensen2006lectures}
 Sørensen, M. H., \& Urzyczyn, P. (2006). \textit{Lectures on the Curry-Howard Isomorphism}. Elsevier.
